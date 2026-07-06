@@ -1,0 +1,153 @@
+/* Global styles for Shiksha Seva Foundation clone */
+
+.App {
+  min-height: 100vh;
+  background: #ffffff;
+}
+
+/* Poppins font family */
+body {
+  font-family: 'Poppins', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  color: #333;
+}
+
+/* Marquee scroll animation */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 30s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee-slow {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.marquee-slow {
+  display: flex;
+  width: max-content;
+  animation: marquee-slow 45s linear infinite;
+}
+
+/* Fade in */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+/* Hero slide transition */
+@keyframes slideFade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.slide-fade {
+  animation: slideFade 1s ease-in-out;
+}
+
+/* Pink brand color */
+:root {
+  --brand-pink: #ec008c;
+  --brand-pink-dark: #c70074;
+  --brand-pink-light: #fce4f0;
+}
+
+.text-brand { color: var(--brand-pink); }
+.bg-brand { background-color: var(--brand-pink); }
+.bg-brand:hover { background-color: var(--brand-pink-dark); }
+
+/* Cause card icon hover */
+.cause-icon {
+  transition: transform 0.4s ease;
+}
+.cause-card:hover .cause-icon {
+  transform: translateY(-8px) scale(1.05);
+}
+
+/* Section heading underline */
+.section-heading {
+  color: var(--brand-pink);
+  font-weight: 700;
+  text-align: center;
+  position: relative;
+  padding-bottom: 14px;
+  margin-bottom: 40px;
+}
+.section-heading::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 2px;
+  background: var(--brand-pink);
+}
+
+/* Program card hover overlay */
+.program-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+.program-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.05) 0%, rgba(236,0,140,0.85) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 24px;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.program-card:hover .program-overlay {
+  opacity: 1;
+}
+.program-card img {
+  transition: transform 0.6s ease;
+}
+.program-card:hover img {
+  transform: scale(1.06);
+}
+
+/* Impact card */
+.impact-card {
+  background: white;
+  border-radius: 8px;
+  padding: 32px 20px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.impact-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(236,0,140,0.15);
+}
+
+/* Slider dots + arrows */
+.slick-arrow {
+  color: #666;
+}
+
+/* Utility */
+.container-x {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
