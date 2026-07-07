@@ -15,7 +15,7 @@ const AlwaysOpenSection = () => {
           <h3 className="text-[#ec008c] uppercase tracking-widest text-sm font-semibold mb-2">Always Open</h3>
           <h2 className="text-3xl md:text-5xl font-bold mb-6">Listen, Act, Learn. Repeat</h2>
           <p className="text-white/90 leading-relaxed mb-8 max-w-lg">
-            Shiksha Seva Foundation is on a mission to promote girl child education in India providing basic and life-skill education amongst the underprivileged women. Contribute towards building a strong foundation for nation through women empowerment and development programs.
+            Gana Seva Foundation is on a mission to promote girl child education in India providing basic and life-skill education amongst the underprivileged women. Contribute towards building a strong foundation for nation through women empowerment and development programs.
           </p>
           <a
             href="#donate"
