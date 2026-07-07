@@ -1,10 +1,12 @@
 import React from "react";
 import PageBanner from "../components/PageBanner";
-import { openPositions } from "../data/mock";
 import { MapPin, Briefcase, Send } from "lucide-react";
 import { toast } from "../hooks/use-toast";
+import { useCollection } from "../hooks/useContent";
+import { openPositions as fallback } from "../data/mock";
 
 const Careers = () => {
+  const jobs = useCollection("careers", fallback);
   const apply = (title) => toast({ title: `Application initiated for ${title}`, description: "Please share your CV at careers@gannasewa.in" });
   return (
     <>
@@ -16,7 +18,7 @@ const Careers = () => {
             <p className="text-gray-600">Join a team that goes to work every day with the goal of changing lives. We're always looking for passionate, mission-driven people.</p>
           </div>
           <div className="space-y-5">
-            {openPositions.map((j) => (
+            {jobs.map((j) => (
               <div key={j.id} className="bg-white rounded-lg shadow-md p-6 flex flex-col md:flex-row md:items-center justify-between gap-4 border-l-4 border-[#ec008c] hover:shadow-xl transition-shadow">
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 mb-2">{j.title}</h3>
@@ -34,7 +36,7 @@ const Careers = () => {
           </div>
           <div className="mt-12 bg-[#faf6f2] rounded-lg p-8 text-center">
             <h3 className="text-xl font-bold text-gray-900 mb-2">Don&rsquo;t see the right role?</h3>
-            <p className="text-gray-600 mb-4">We're always keen to hear from talented people. Send us your CV and a note about how you'd like to contribute.</p>
+            <p className="text-gray-600 mb-4">We're always keen to hear from talented people. Send us your CV.</p>
             <a href="mailto:careers@gannasewa.in" className="inline-block bg-[#ec008c] hover:bg-[#c70074] text-white px-8 py-3 rounded-full font-semibold">careers@gannasewa.in</a>
           </div>
         </div>

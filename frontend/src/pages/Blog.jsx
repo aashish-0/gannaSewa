@@ -1,9 +1,11 @@
 import React from "react";
 import PageBanner from "../components/PageBanner";
-import { blogPosts } from "../data/mock";
 import { Calendar, User, ArrowRight } from "lucide-react";
+import { useCollection } from "../hooks/useContent";
+import { blogPosts as fallback } from "../data/mock";
 
 const Blog = () => {
+  const posts = useCollection("blog", fallback);
   return (
     <>
       <PageBanner title="Blog" breadcrumbs={[{ label: "Media" }, { label: "Blog" }]} />
@@ -14,7 +16,7 @@ const Blog = () => {
             <p className="text-gray-600">Reflections, insights, and updates from our team, volunteers, and beneficiaries.</p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {blogPosts.map((p) => (
+            {posts.map((p) => (
               <article key={p.id} className="bg-white rounded-lg shadow-md overflow-hidden group hover:shadow-2xl transition-shadow">
                 <div className="aspect-[16/10] overflow-hidden">
                   <img src={p.image} alt={p.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
