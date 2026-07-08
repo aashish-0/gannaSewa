@@ -1,8 +1,10 @@
 import React from "react";
-import { corporatePartners } from "../data/mock";
+import { useCollection } from "../hooks/useContent";
+import { corporatePartners as fallback } from "../data/mock";
 
 const CorporatePartners = () => {
-  const items = [...corporatePartners, ...corporatePartners];
+  const partners = useCollection("partners", fallback.map((logo, i) => ({ id: `f${i}`, name: `Partner ${i + 1}`, logo })));
+  const items = [...partners, ...partners];
 
   return (
     <section className="py-16 md:py-20 bg-[#faf6f2]">
@@ -11,12 +13,9 @@ const CorporatePartners = () => {
       </div>
       <div className="relative w-full overflow-hidden">
         <div className="marquee-track gap-8">
-          {items.map((src, i) => (
-            <div
-              key={i}
-              className="flex-shrink-0 w-40 md:w-52 h-24 flex items-center justify-center bg-white rounded-md shadow-sm px-4"
-            >
-              <img src={src} alt="corporate partner" className="max-h-full max-w-full object-contain" />
+          {items.map((p, i) => (
+            <div key={i} className="flex-shrink-0 w-40 md:w-52 h-24 flex items-center justify-center bg-white rounded-md shadow-sm px-4">
+              <img src={p.logo} alt={p.name || "partner"} className="max-h-full max-w-full object-contain" />
             </div>
           ))}
         </div>

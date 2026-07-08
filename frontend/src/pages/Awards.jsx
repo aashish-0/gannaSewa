@@ -1,9 +1,11 @@
 import React from "react";
 import PageBanner from "../components/PageBanner";
-import { awards } from "../data/mock";
 import { Trophy } from "lucide-react";
+import { useCollection } from "../hooks/useContent";
+import { awards as fallback } from "../data/mock";
 
 const Awards = () => {
+  const items = useCollection("awards", fallback);
   return (
     <>
       <PageBanner title="Awards & Recognition" breadcrumbs={[{ label: "About Us" }, { label: "Awards" }]} />
@@ -14,11 +16,9 @@ const Awards = () => {
             <p className="text-gray-600">Awards are a reflection of the incredible work our teams, partners, and beneficiaries do every day.</p>
           </div>
           <div className="space-y-6">
-            {awards.map((a) => (
+            {items.map((a) => (
               <div key={a.id} className="flex flex-col md:flex-row gap-6 items-start bg-white p-6 rounded-lg shadow-md border-l-4 border-[#ec008c] hover:shadow-xl transition-shadow">
-                <div className="flex-shrink-0 w-16 h-16 rounded-full bg-[#fce4f0] flex items-center justify-center">
-                  <Trophy className="w-8 h-8 text-[#ec008c]" />
-                </div>
+                <div className="flex-shrink-0 w-16 h-16 rounded-full bg-[#fce4f0] flex items-center justify-center"><Trophy className="w-8 h-8 text-[#ec008c]" /></div>
                 <div className="flex-1">
                   <div className="flex flex-wrap items-center gap-3 mb-2">
                     <span className="bg-[#ec008c] text-white text-xs font-bold px-3 py-1 rounded-full">{a.year}</span>

@@ -1,0 +1,39 @@
+// ============================================================
+// FIRESTORE SECURITY RULES
+// ============================================================
+// Copy these rules and paste them in Firebase Console:
+// Firestore Database -> Rules tab -> paste -> Publish
+// ============================================================
+
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Helper functions
+    function isSignedIn() {
+      return request.auth != null;
+    }
+    function userRole() {
+      return get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role;
+    }
+    function isAdmin() {
+      return isSignedIn() && (userRole() == 'super_admin' || userRole() == 'editor');
+    }
+    function isSuperAdmin() {
+      return isSignedIn() && userRole() == 'super_admin';
+    }
+
+    // Users collection: users can read their own; super admins can read/write all
+    match /users/{userId} {
+      allow read: if isSignedIn() && (request.auth.uid == userId || isSuperAdmin());
+      allow create: if isSignedIn() && request.auth.uid == userId; // first-time self-create
+      allow update, delete: if isSuperAdmin();
+    }
+
+    // Public content: anyone can read, only admins can write
+    match /{collection}/{docId} {
+      allow read: if true; // Public site can read all content
+      allow write: if isAdmin();
+    }
+  }
+}

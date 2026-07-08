@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import PageBanner from "../components/PageBanner";
-import { instagramGallery } from "../data/mock";
 import { X } from "lucide-react";
+import { useCollection } from "../hooks/useContent";
+import { instagramGallery } from "../data/mock";
 
 const Gallery = () => {
+  const items = useCollection("gallery", instagramGallery.map((url, i) => ({ id: `f${i}`, url })));
   const [preview, setPreview] = useState(null);
-  const all = [...instagramGallery, ...instagramGallery.slice(0, 6)];
   return (
     <>
       <PageBanner title="Gallery" breadcrumbs={[{ label: "Media" }, { label: "Gallery" }]} />
@@ -16,9 +17,9 @@ const Gallery = () => {
             <p className="text-gray-600">Photos from our programs, events, community outreach, and celebrations.</p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {all.map((src, i) => (
-              <button key={i} onClick={() => setPreview(src)} className="aspect-square overflow-hidden rounded-lg shadow-sm group">
-                <img src={src} alt={`gallery ${i}`} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+            {items.map((item, i) => (
+              <button key={item.id || i} onClick={() => setPreview(item.url)} className="aspect-square overflow-hidden rounded-lg shadow-sm group">
+                <img src={item.url} alt={item.caption || `gallery ${i}`} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
               </button>
             ))}
           </div>
@@ -26,9 +27,7 @@ const Gallery = () => {
       </section>
       {preview && (
         <div className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4" onClick={() => setPreview(null)}>
-          <button className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/90 flex items-center justify-center" onClick={() => setPreview(null)}>
-            <X className="w-5 h-5" />
-          </button>
+          <button className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/90 flex items-center justify-center" onClick={() => setPreview(null)}><X className="w-5 h-5" /></button>
           <img src={preview} alt="preview" className="max-w-full max-h-[90vh] rounded-lg" onClick={(e) => e.stopPropagation()} />
         </div>
       )}
