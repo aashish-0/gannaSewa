@@ -24,7 +24,7 @@ const CollectionManager = ({ title, description, collectionName, fields, listCol
     try { q = query(collection(db, collectionName), orderBy("createdAt", "desc")); }
     catch { q = collection(db, collectionName); }
     const unsub = onSnapshot(q, (snap) => {
-      setItems(snap.docs.map((d) => ({ id: d.id, ...d.data() })));
+      setItems(snap.docs.map((d) => ({ ...d.data(), id: d.id })));
       setLoading(false);
     }, () => setLoading(false));
     return unsub;
