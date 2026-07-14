@@ -1,4 +1,4 @@
-/* Global styles for Shiksha Seva Foundation clone */
+/* Global styles for Gana Sewa Foundation clone */
 
 .App {
   min-height: 100vh;
@@ -60,9 +60,9 @@ body {
 
 /* Pink brand color */
 :root {
-  --brand-pink: #ec008c;
-  --brand-pink-dark: #c70074;
-  --brand-pink-light: #fce4f0;
+  --brand-pink: #059669;
+  --brand-pink-dark: #047857;
+  --brand-pink-light: #d1fae5;
 }
 
 .text-brand { color: var(--brand-pink); }

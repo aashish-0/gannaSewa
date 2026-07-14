@@ -9,10 +9,10 @@ const SEED_TASKS = [
   { key: "settings", label: "Site Settings (brand, contact, socials, UPI)", type: "doc", path: "content/settings", data: () => ({ ...mock.brand, ...mock.social, upiId: "gannasewa@upi", upiPayeeName: mock.brand.fullName, upiQrImage: "" }) },
   { key: "about", label: "About Page Content", type: "doc", path: "content/about", data: () => ({
     heading: "Helping Today. Helping Tomorrow",
-    description: "We nurture underprivileged girl child section of the society, help needy child, work upon women empowerment for a strong nation building, get the right medical aid, outreach to outskirts and make education available for literacy & organize special need based programs. We at Ganna Sewa Foundation want to seek all round development and well being of a girl child, regardless of circumstances they belong too.",
+    description: "We nurture underprivileged girl child section of the society, help needy child, work upon women empowerment for a strong nation building, get the right medical aid, outreach to outskirts and make education available for literacy & organize special need based programs. We at Gana Sewa Foundation want to seek all round development and well being of a girl child, regardless of circumstances they belong too.",
     image: "https://shikshaseva.org/wp-content/uploads/2021/09/Helping-Today-Helping-tomorrow-.jpg",
     storyHeading: "A Journey of Compassion and Change",
-    storyPara1: "Ganna Sewa Foundation was born from a simple yet powerful belief: every girl child deserves the right to education, health, and a life of dignity. Founded in 2012 by a small group of committed volunteers in Mumbai, we started with just 15 children in a Dharavi community center.",
+    storyPara1: "Gana Sewa Foundation was born from a simple yet powerful belief: every girl child deserves the right to education, health, and a life of dignity. Founded in 2012 by a small group of committed volunteers in Mumbai, we started with just 15 children in a Dharavi community center.",
     storyPara2: "Today, over a decade later, we work across 8 states, serving hundreds of thousands of women and girls.",
     storyPara3: "Our journey has been powered by ordinary people doing extraordinary things.",
     vision: "A society where every girl child is educated, empowered, and equipped with equal opportunities to build the life she dreams of.",

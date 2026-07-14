@@ -9,7 +9,7 @@ const ProfileCTA = () => {
         <h2 className="text-3xl md:text-4xl font-bold mb-8">Gana Seva Foundation Profile</h2>
         <a
           href="#"
-          className="inline-flex items-center gap-2 bg-[#ec008c] hover:bg-[#c70074] transition-colors text-white px-8 py-3 rounded-full font-semibold shadow-lg"
+          className="inline-flex items-center gap-2 bg-[#059669] hover:bg-[#047857] transition-colors text-white px-8 py-3 rounded-full font-semibold shadow-lg"
         >
           <FileText className="w-4 h-4" />
           Gana Seva Foundation Profile

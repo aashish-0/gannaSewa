@@ -89,14 +89,14 @@ const CollectionManager = ({ title, description, collectionName, fields, listCol
           <h1 className="text-2xl font-bold text-gray-900">{title}</h1>
           {description && <p className="text-sm text-gray-500 mt-1">{description}</p>}
         </div>
-        <button onClick={openNew} className="inline-flex items-center gap-2 bg-[#ec008c] hover:bg-[#c70074] text-white px-4 py-2 rounded-md text-sm font-medium">
+        <button onClick={openNew} className="inline-flex items-center gap-2 bg-[#059669] hover:bg-[#047857] text-white px-4 py-2 rounded-md text-sm font-medium">
           <Plus className="w-4 h-4" /> Add New
         </button>
       </div>
 
       <div className="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden">
         {loading ? (
-          <div className="p-12 flex justify-center"><Loader2 className="w-6 h-6 animate-spin text-[#ec008c]" /></div>
+          <div className="p-12 flex justify-center"><Loader2 className="w-6 h-6 animate-spin text-[#059669]" /></div>
         ) : items.length === 0 ? (
           <div className="p-12 text-center text-gray-500">
             <p>No items yet. Click "Add New" to create your first entry.</p>
@@ -125,7 +125,7 @@ const CollectionManager = ({ title, description, collectionName, fields, listCol
                       <td key={col} className="px-4 py-3 text-gray-700 max-w-xs truncate">{String(item[col] ?? "").slice(0, 100)}</td>
                     ))}
                     <td className="px-4 py-3 text-right">
-                      <button onClick={() => openEdit(item)} className="inline-flex items-center gap-1 text-gray-600 hover:text-[#ec008c] mr-3 text-sm">
+                      <button onClick={() => openEdit(item)} className="inline-flex items-center gap-1 text-gray-600 hover:text-[#059669] mr-3 text-sm">
                         <Pencil className="w-4 h-4" /> Edit
                       </button>
                       <button onClick={() => onDelete(item)} className="inline-flex items-center gap-1 text-gray-600 hover:text-red-600 text-sm">
@@ -162,7 +162,7 @@ const CollectionManager = ({ title, description, collectionName, fields, listCol
                         {f.options?.map((o) => <option key={o.value || o} value={o.value || o}>{o.label || o}</option>)}
                       </select>
                     ) : (
-                      <input required={f.required} type={f.type || "text"} value={form[f.name] || ""} onChange={(e) => setForm({ ...form, [f.name]: e.target.value })} placeholder={f.placeholder} className="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-[#ec008c] outline-none text-sm" />
+                      <input required={f.required} type={f.type || "text"} value={form[f.name] || ""} onChange={(e) => setForm({ ...form, [f.name]: e.target.value })} placeholder={f.placeholder} className="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-[#059669] outline-none text-sm" />
                     )}
                     {f.hint && <p className="text-xs text-gray-500 mt-1">{f.hint}</p>}
                     {f.name === imageField && form[f.name] && <img src={form[f.name]} alt="preview" className="mt-2 max-h-32 rounded" />}
@@ -171,7 +171,7 @@ const CollectionManager = ({ title, description, collectionName, fields, listCol
               </div>
               <div className="flex items-center justify-end gap-3 px-6 py-4 border-t border-gray-200 bg-gray-50">
                 <button type="button" onClick={closeModal} className="px-4 py-2 rounded-md text-sm text-gray-700 hover:bg-gray-200">Cancel</button>
-                <button type="submit" disabled={saving} className="px-4 py-2 rounded-md text-sm bg-[#ec008c] hover:bg-[#c70074] text-white font-medium disabled:opacity-60 inline-flex items-center gap-2">
+                <button type="submit" disabled={saving} className="px-4 py-2 rounded-md text-sm bg-[#059669] hover:bg-[#047857] text-white font-medium disabled:opacity-60 inline-flex items-center gap-2">
                   {saving && <Loader2 className="w-4 h-4 animate-spin" />}
                   {editing ? "Update" : "Create"}
                 </button>

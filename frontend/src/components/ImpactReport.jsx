@@ -38,9 +38,9 @@ const ImpactReport = () => {
             <div key={s.id} className="impact-card">
               <div className="text-3xl md:text-4xl font-bold text-gray-900">
                 <CountUp end={Number(s.value) || 0} />
-                <sup className="text-[#ec008c] text-xl">{s.suffix || "+"}</sup>
+                <sup className="text-[#059669] text-xl">{s.suffix || "+"}</sup>
               </div>
-              <div className="text-xs md:text-sm font-semibold text-[#ec008c] mt-3 tracking-wide">{s.label}</div>
+              <div className="text-xs md:text-sm font-semibold text-[#059669] mt-3 tracking-wide">{s.label}</div>
             </div>
           ))}
         </div>

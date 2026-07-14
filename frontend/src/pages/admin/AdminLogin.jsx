@@ -35,7 +35,7 @@ const AdminLogin = () => {
       <div className="w-full max-w-md">
         <Link to="/" className="flex flex-col items-center mb-8">
           <div className="w-16 h-16 rounded-full bg-[#ec008c] flex items-center justify-center text-white font-bold text-xl shadow-lg">GS</div>
-          <h1 className="mt-3 text-2xl font-bold text-gray-900">Ganna Sewa Foundation</h1>
+          <h1 className="mt-3 text-2xl font-bold text-gray-900">Gana Sewa Foundation</h1>
           <p className="text-sm text-gray-600">Admin Panel</p>
         </Link>
 

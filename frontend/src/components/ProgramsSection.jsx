@@ -6,8 +6,8 @@ const ProgramsSection = () => {
     <section id="programs" className="py-16 md:py-20 bg-white">
       <div className="container-x">
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <h4 className="text-[#ec008c] uppercase tracking-widest text-sm font-semibold mb-3">OUR PROGRAMS</h4>
-          <h2 className="text-3xl md:text-4xl font-bold text-[#ec008c] mb-4">
+          <h4 className="text-[#059669] uppercase tracking-widest text-sm font-semibold mb-3">OUR PROGRAMS</h4>
+          <h2 className="text-3xl md:text-4xl font-bold text-[#059669] mb-4">
             #HaqBantaHai
           </h2>
           <h3 className="text-xl md:text-2xl font-semibold text-gray-800 mb-4">

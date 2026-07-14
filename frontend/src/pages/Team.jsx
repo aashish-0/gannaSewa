@@ -13,7 +13,7 @@ const Team = () => {
         <div className="container-x">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Meet the People Behind the Mission</h2>
-            <p className="text-gray-600">Passionate leaders, dedicated field workers, and committed volunteers &mdash; our team is what makes Ganna Sewa possible.</p>
+            <p className="text-gray-600">Passionate leaders, dedicated field workers, and committed volunteers &mdash; our team is what makes Gana Sewa possible.</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {members.map((m) => (
@@ -23,11 +23,11 @@ const Team = () => {
                 </div>
                 <div className="p-6 text-center">
                   <h3 className="text-xl font-bold text-gray-900">{m.name}</h3>
-                  <p className="text-[#ec008c] font-medium text-sm mb-3">{m.role}</p>
+                  <p className="text-[#059669] font-medium text-sm mb-3">{m.role}</p>
                   <p className="text-sm text-gray-600 mb-4">{m.bio}</p>
                   <div className="flex justify-center gap-2">
-                    <a href="#" className="w-9 h-9 rounded-full bg-[#faf6f2] hover:bg-[#ec008c] hover:text-white transition-colors flex items-center justify-center text-[#ec008c]"><Linkedin className="w-4 h-4" /></a>
-                    <a href="#" className="w-9 h-9 rounded-full bg-[#faf6f2] hover:bg-[#ec008c] hover:text-white transition-colors flex items-center justify-center text-[#ec008c]"><Mail className="w-4 h-4" /></a>
+                    <a href="#" className="w-9 h-9 rounded-full bg-[#faf6f2] hover:bg-[#059669] hover:text-white transition-colors flex items-center justify-center text-[#059669]"><Linkedin className="w-4 h-4" /></a>
+                    <a href="#" className="w-9 h-9 rounded-full bg-[#faf6f2] hover:bg-[#059669] hover:text-white transition-colors flex items-center justify-center text-[#059669]"><Mail className="w-4 h-4" /></a>
                   </div>
                 </div>
               </div>

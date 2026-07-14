@@ -59,7 +59,7 @@ const AdminLayout = () => {
       <aside className={`${sidebarOpen ? "translate-x-0" : "-translate-x-full"} lg:translate-x-0 fixed lg:sticky top-0 left-0 h-screen w-64 bg-white border-r border-gray-200 z-40 flex flex-col transition-transform`}>
         <div className="p-5 border-b border-gray-200">
           <Link to="/admin" className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full bg-[#ec008c] flex items-center justify-center text-white font-bold">GS</div>
+            <div className="w-10 h-10 rounded-full bg-[#059669] flex items-center justify-center text-white font-bold">GS</div>
             <div>
               <div className="font-bold text-gray-900 text-sm">Ganna Sewa</div>
               <div className="text-xs text-gray-500">Admin Panel</div>
@@ -87,7 +87,7 @@ const AdminLayout = () => {
                       to={item.to}
                       end={item.end}
                       onClick={() => setSidebarOpen(false)}
-                      className={({ isActive }) => `flex items-center gap-3 px-3 py-2 rounded-md text-sm transition-colors ${isActive ? "bg-[#ec008c] text-white font-medium" : "text-gray-700 hover:bg-gray-100"}`}
+                      className={({ isActive }) => `flex items-center gap-3 px-3 py-2 rounded-md text-sm transition-colors ${isActive ? "bg-[#059669] text-white font-medium" : "text-gray-700 hover:bg-gray-100"}`}
                     >
                       <item.Icon className="w-4 h-4" /> {item.name}
                     </NavLink>
@@ -100,7 +100,7 @@ const AdminLayout = () => {
 
         <div className="p-4 border-t border-gray-200">
           <div className="flex items-center gap-3 mb-3">
-            <div className="w-9 h-9 rounded-full bg-[#fce4f0] flex items-center justify-center text-[#ec008c] font-bold text-sm">
+            <div className="w-9 h-9 rounded-full bg-[#f0fdf4] flex items-center justify-center text-[#059669] font-bold text-sm">
               {profile?.email?.[0]?.toUpperCase()}
             </div>
             <div className="flex-1 min-w-0">
@@ -108,7 +108,7 @@ const AdminLayout = () => {
               <div className="text-xs text-gray-500 truncate">{profile?.role?.replace("_", " ")}</div>
             </div>
           </div>
-          <button onClick={handleLogout} className="w-full flex items-center justify-center gap-2 px-3 py-2 rounded-md text-sm bg-[#faf6f2] hover:bg-[#fce4f0] text-gray-700 transition-colors">
+          <button onClick={handleLogout} className="w-full flex items-center justify-center gap-2 px-3 py-2 rounded-md text-sm bg-[#faf6f2] hover:bg-[#f0fdf4] text-gray-700 transition-colors">
             <LogOut className="w-4 h-4" /> Logout
           </button>
         </div>
@@ -123,7 +123,7 @@ const AdminLayout = () => {
             <Menu className="w-6 h-6" />
           </button>
           <div className="flex items-center gap-4 ml-auto">
-            <Link to="/" target="_blank" className="hidden sm:flex items-center gap-1 text-sm text-gray-600 hover:text-[#ec008c] transition-colors">
+            <Link to="/" target="_blank" className="hidden sm:flex items-center gap-1 text-sm text-gray-600 hover:text-[#059669] transition-colors">
               <Home className="w-4 h-4" /> View Live Site
             </Link>
           </div>

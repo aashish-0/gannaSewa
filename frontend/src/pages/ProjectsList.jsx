@@ -25,9 +25,9 @@ const ProjectsList = () => {
                   <img src={p.image} alt={p.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-[#ec008c] transition-colors">{p.title}</h3>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-[#059669] transition-colors">{p.title}</h3>
                   <p className="text-sm text-gray-600 mb-4 line-clamp-2">{p.subtitle}</p>
-                  <span className="inline-flex items-center gap-2 text-[#ec008c] font-semibold text-sm">
+                  <span className="inline-flex items-center gap-2 text-[#059669] font-semibold text-sm">
                     Learn More <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </span>
                 </div>

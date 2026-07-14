@@ -11,20 +11,20 @@ const Header = () => {
   const isActive = (href) => href === "/" ? location.pathname === "/" : location.pathname.startsWith(href);
 
   return (
-    <header className="sticky top-0 z-50 bg-[#ec008c] shadow-md">
+    <header className="sticky top-0 z-50 bg-[#059669] shadow-md">
       <div className="container-x flex items-center justify-between h-[70px] relative">
         <Link to="/" className="absolute left-6 -top-1 md:top-2 bg-white rounded-b-2xl px-5 pt-3 pb-4 shadow-lg z-10">
           <div className="flex flex-col items-center">
             <div className="w-14 h-14 flex items-center justify-center">
               <svg viewBox="0 0 100 100" className="w-full h-full" fill="none">
-                <path d="M30 20 Q50 5 70 20 Q65 40 50 45 Q35 40 30 20 Z" fill="#ec008c" />
-                <path d="M50 45 Q65 55 60 75 Q50 85 40 75 Q35 55 50 45 Z" fill="#ec008c" />
-                <circle cx="50" cy="15" r="5" fill="#ec008c" />
+                <path d="M30 20 Q50 5 70 20 Q65 40 50 45 Q35 40 30 20 Z" fill="#059669" />
+                <path d="M50 45 Q65 55 60 75 Q50 85 40 75 Q35 55 50 45 Z" fill="#059669" />
+                <circle cx="50" cy="15" r="5" fill="#059669" />
               </svg>
             </div>
-            <div className="text-[#ec008c] font-bold text-[13px] leading-tight tracking-tight">Ganna Sewa</div>
-            <div className="text-[#ec008c] font-bold text-[13px] leading-tight">Foundation</div>
-            <div className="text-[#ec008c] text-[7px] mt-0.5 tracking-wider">{brand.tagline}</div>
+            <div className="text-[#059669] font-bold text-[13px] leading-tight tracking-tight">Gana Sewa</div>
+            <div className="text-[#059669] font-bold text-[13px] leading-tight">Foundation</div>
+            <div className="text-[#059669] text-[7px] mt-0.5 tracking-wider">{brand.tagline}</div>
           </div>
         </Link>
 
@@ -51,8 +51,8 @@ const Header = () => {
           ))}
         </nav>
 
-        <Link to="/donate" className="hidden lg:flex items-center gap-2 bg-white text-[#ec008c] px-6 py-2.5 rounded-full font-semibold text-sm hover:bg-gray-100 transition-colors shadow-md">
-          Donate Now <Heart className="w-4 h-4 fill-[#ec008c]" />
+        <Link to="/donate" className="hidden lg:flex items-center gap-2 bg-white text-[#059669] px-6 py-2.5 rounded-full font-semibold text-sm hover:bg-gray-100 transition-colors shadow-md">
+          Donate Now <Heart className="w-4 h-4 fill-[#059669]" />
         </Link>
 
         <button className="lg:hidden ml-auto text-white p-2" onClick={() => setMobileOpen(!mobileOpen)} aria-label="toggle menu">
@@ -61,7 +61,7 @@ const Header = () => {
       </div>
 
       {mobileOpen && (
-        <div className="lg:hidden bg-[#ec008c] border-t border-white/20 max-h-[80vh] overflow-y-auto">
+        <div className="lg:hidden bg-[#059669] border-t border-white/20 max-h-[80vh] overflow-y-auto">
           <nav className="container-x py-4 flex flex-col">
             {navigation.map((item) => (
               <div key={item.name} className="border-b border-white/20">
@@ -82,7 +82,7 @@ const Header = () => {
                 )}
               </div>
             ))}
-            <Link to="/donate" onClick={() => setMobileOpen(false)} className="mt-4 bg-white text-[#ec008c] py-2.5 rounded-full text-center font-semibold">Donate Now</Link>
+            <Link to="/donate" onClick={() => setMobileOpen(false)} className="mt-4 bg-white text-[#059669] py-2.5 rounded-full text-center font-semibold">Donate Now</Link>
           </nav>
         </div>
       )}

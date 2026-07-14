@@ -1,15 +1,15 @@
-// Mock data for Ganna Sewa Foundation website
+// Mock data for Gana Sewa Foundation website
 
 export const brand = {
-  name: "Ganna Sewa",
-  fullName: "Ganna Sewa Foundation",
+  name: "Gana Sewa",
+  fullName: "Gana Sewa Foundation",
   tagline: "EMPOWERING GIRLS AND WOMEN",
   hashtag: "#HaqBantaHai",
   phone: "+91 98765 43210",
   phoneRaw: "+919876543210",
-  email: "info@gannasewa.in",
+  email: "info@ganasewa.in",
   whatsapp: "919876543210",
-  address: "Ganna Sewa Foundation, 12 Community Lane, Andheri West, Mumbai, Maharashtra 400058, India",
+  address: "Gana Sewa Foundation, 12 Community Lane, Andheri West, Mumbai, Maharashtra 400058, India",
   ngoReg: "NGO Registration No. GS/2015/00123",
   taxNote: "Donations exempted under 80G of the Income Tax Act 1961"
 };
@@ -173,10 +173,10 @@ export const blogPosts = [
 ];
 
 export const pressReleases = [
-  { id: 1, date: "March 10, 2025", title: "Ganna Sewa Foundation Partners with SBI for Nationwide Education Drive", source: "Business Standard" },
-  { id: 2, date: "February 22, 2025", title: "Girl Child Education Gets a Boost as Ganna Sewa Expands to 5 New States", source: "The Hindu" },
-  { id: 3, date: "January 18, 2025", title: "Ganna Sewa's Flood Relief Efforts Reach 8,000+ Families", source: "Times of India" },
-  { id: 4, date: "December 5, 2024", title: "Ganna Sewa Foundation Celebrates 13 Years of Impact", source: "Indian Express" },
+  { id: 1, date: "March 10, 2025", title: "Gana Sewa Foundation Partners with SBI for Nationwide Education Drive", source: "Business Standard" },
+  { id: 2, date: "February 22, 2025", title: "Girl Child Education Gets a Boost as Gana Sewa Expands to 5 New States", source: "The Hindu" },
+  { id: 3, date: "January 18, 2025", title: "Gana Sewa's Flood Relief Efforts Reach 8,000+ Families", source: "Times of India" },
+  { id: 4, date: "December 5, 2024", title: "Gana Sewa Foundation Celebrates 13 Years of Impact", source: "Indian Express" },
   { id: 5, date: "November 14, 2024", title: "Vocational Training Program Empowers 1000+ Women in Maharashtra", source: "Mid-Day" }
 ];
 

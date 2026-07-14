@@ -16,11 +16,11 @@ const Partner = () => {
       <section className="py-16">
         <div className="container-x grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h3 className="text-[#ec008c] font-bold uppercase text-sm tracking-widest mb-3">Collaborate for Change</h3>
+            <h3 className="text-[#059669] font-bold uppercase text-sm tracking-widest mb-3">Collaborate for Change</h3>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Build Impactful Partnerships</h2>
             <p className="text-gray-600 leading-relaxed mb-4">Whether you're a foundation, corporation, or fellow non-profit, we welcome partnerships that amplify impact and reach more girls and women.</p>
             <p className="text-gray-600 leading-relaxed mb-6">Our partnership models are flexible &mdash; from program sponsorship and cause marketing to skill-based collaborations and joint initiatives.</p>
-            <Link to="/contact" className="inline-block bg-[#ec008c] hover:bg-[#c70074] text-white px-8 py-3 rounded-full font-semibold">Start a Conversation</Link>
+            <Link to="/contact" className="inline-block bg-[#059669] hover:bg-[#047857] text-white px-8 py-3 rounded-full font-semibold">Start a Conversation</Link>
           </div>
           <div>
             <img src="https://shikshaseva.org/wp-content/uploads/2021/09/story-3.jpg" alt="partnership" className="rounded-lg shadow-xl" />
@@ -33,7 +33,7 @@ const Partner = () => {
           <div className="grid md:grid-cols-4 gap-6 mt-10">
             {benefits.map((b, i) => (
               <div key={i} className="bg-white rounded-lg p-6 shadow-md text-center hover:shadow-xl transition-shadow">
-                <b.Icon className="w-10 h-10 text-[#ec008c] mx-auto mb-4" />
+                <b.Icon className="w-10 h-10 text-[#059669] mx-auto mb-4" />
                 <h3 className="font-bold text-lg mb-2">{b.title}</h3>
                 <p className="text-sm text-gray-600">{b.text}</p>
               </div>

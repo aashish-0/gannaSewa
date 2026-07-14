@@ -47,7 +47,7 @@ const ProjectDetail = () => {
     })();
   }, [slug]);
 
-  if (project === undefined) return <div className="py-24 flex justify-center"><Loader2 className="w-8 h-8 animate-spin text-[#ec008c]" /></div>;
+  if (project === undefined) return <div className="py-24 flex justify-center"><Loader2 className="w-8 h-8 animate-spin text-[#059669]" /></div>;
   if (project === null) return <Navigate to="/projects" replace />;
 
   return (
@@ -57,13 +57,13 @@ const ProjectDetail = () => {
         <div className="container-x grid md:grid-cols-3 gap-10">
           <div className="md:col-span-2">
             <img src={project.image} alt={project.title} className="w-full rounded-lg shadow-lg mb-8" />
-            <h2 className="text-2xl md:text-3xl font-bold text-[#ec008c] mb-4">{project.subtitle}</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-[#059669] mb-4">{project.subtitle}</h2>
             {project.body.map((p, i) => <p key={i} className="text-gray-700 leading-relaxed mb-4">{p}</p>)}
             {project.stats.length > 0 && (
               <div className="grid grid-cols-3 gap-4 mt-8">
                 {project.stats.map((s, i) => (
                   <div key={i} className="bg-[#faf6f2] p-5 rounded-lg text-center">
-                    <div className="text-2xl md:text-3xl font-bold text-[#ec008c]">{s.value}</div>
+                    <div className="text-2xl md:text-3xl font-bold text-[#059669]">{s.value}</div>
                     <div className="text-xs md:text-sm text-gray-600 mt-1">{s.label}</div>
                   </div>
                 ))}
@@ -71,10 +71,10 @@ const ProjectDetail = () => {
             )}
           </div>
           <aside className="space-y-6">
-            <div className="bg-[#ec008c] text-white rounded-lg p-6 shadow-md">
+            <div className="bg-[#059669] text-white rounded-lg p-6 shadow-md">
               <h3 className="text-xl font-bold mb-3">Support This Program</h3>
               <p className="text-sm text-white/90 mb-4">Your contribution helps us reach more beneficiaries every month.</p>
-              <Link to="/donate" className="inline-flex items-center gap-2 bg-white text-[#ec008c] px-5 py-2.5 rounded-full font-semibold text-sm">Donate Now <Heart className="w-4 h-4 fill-[#ec008c]" /></Link>
+              <Link to="/donate" className="inline-flex items-center gap-2 bg-white text-[#059669] px-5 py-2.5 rounded-full font-semibold text-sm">Donate Now <Heart className="w-4 h-4 fill-[#059669]" /></Link>
             </div>
             {others.length > 0 && (
               <div className="bg-white border border-gray-200 rounded-lg p-6">
@@ -82,7 +82,7 @@ const ProjectDetail = () => {
                 <ul className="space-y-3">
                   {others.map((p) => (
                     <li key={p.slug}>
-                      <Link to={`/projects/${p.slug}`} className="flex items-center justify-between text-sm text-gray-700 hover:text-[#ec008c] transition-colors">
+                      <Link to={`/projects/${p.slug}`} className="flex items-center justify-between text-sm text-gray-700 hover:text-[#059669] transition-colors">
                         <span>{p.title}</span> <ArrowRight className="w-4 h-4" />
                       </Link>
                     </li>

@@ -55,9 +55,9 @@ const DocumentEditor = ({ title, description, docPath, sections }) => {
                 <div key={f.name} className={f.full ? "md:col-span-2" : ""}>
                   <label className="block text-sm font-medium text-gray-700 mb-1.5">{f.label}</label>
                   {f.type === "textarea" ? (
-                    <textarea rows={f.rows || 4} value={form[f.name] || ""} onChange={(e) => setForm({ ...form, [f.name]: e.target.value })} className="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-[#ec008c] outline-none text-sm" />
+                    <textarea rows={f.rows || 4} value={form[f.name] || ""} onChange={(e) => setForm({ ...form, [f.name]: e.target.value })} className="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-[#059669] outline-none text-sm" />
                   ) : (
-                    <input type={f.type || "text"} value={form[f.name] || ""} onChange={(e) => setForm({ ...form, [f.name]: e.target.value })} className="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-[#ec008c] outline-none text-sm" />
+                    <input type={f.type || "text"} value={form[f.name] || ""} onChange={(e) => setForm({ ...form, [f.name]: e.target.value })} className="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-[#059669] outline-none text-sm" />
                   )}
                   {f.hint && <p className="text-xs text-gray-500 mt-1">{f.hint}</p>}
                   {f.type === "url" && form[f.name] && <img src={form[f.name]} alt="preview" className="mt-2 max-h-24 rounded border" />}
@@ -67,7 +67,7 @@ const DocumentEditor = ({ title, description, docPath, sections }) => {
           </div>
         ))}
         <div className="sticky bottom-4 bg-white rounded-lg shadow-lg border border-gray-200 px-4 py-3 flex items-center justify-end">
-          <button type="submit" disabled={saving} className="inline-flex items-center gap-2 bg-[#ec008c] hover:bg-[#c70074] text-white px-6 py-2 rounded-md font-medium text-sm disabled:opacity-60">
+          <button type="submit" disabled={saving} className="inline-flex items-center gap-2 bg-[#059669] hover:bg-[#047857] text-white px-6 py-2 rounded-md font-medium text-sm disabled:opacity-60">
             {saving ? <Loader2 className="w-4 h-4 animate-spin" /> : <Save className="w-4 h-4" />}
             {saving ? "Saving..." : "Save Changes"}
           </button>

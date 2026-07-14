@@ -47,14 +47,14 @@ const AdminDashboard = () => {
         <StatCard icon={FileText} label="Blog Posts" value={counts.blog} color="bg-purple-50 text-purple-600" to="/admin/blog" />
         <StatCard icon={Camera} label="Gallery Items" value={counts.gallery} color="bg-orange-50 text-orange-600" to="/admin/gallery" />
         <StatCard icon={BookOpen} label="Projects" value={counts.projects} color="bg-green-50 text-green-600" to="/admin/projects" />
-        <StatCard icon={FileText} label="Stories" value={counts.stories} color="bg-pink-50 text-[#ec008c]" to="/admin/stories" />
+        <StatCard icon={FileText} label="Stories" value={counts.stories} color="bg-pink-50 text-[#059669]" to="/admin/stories" />
         <StatCard icon={TrendingUp} label="Job Openings" value={counts.careers} color="bg-teal-50 text-teal-600" to="/admin/careers" />
       </div>
 
-      <div className="bg-gradient-to-r from-[#ec008c] to-[#f062ad] rounded-lg p-6 text-white">
+      <div className="bg-gradient-to-r from-[#059669] to-[#059669] rounded-lg p-6 text-white">
         <h2 className="text-xl font-bold mb-2">Quick Setup</h2>
         <p className="text-white/90 mb-4 text-sm">If this is your first time, click below to populate initial content from the current live site.</p>
-        <Link to="/admin/seed" className="inline-flex items-center gap-2 bg-white text-[#ec008c] px-5 py-2 rounded-md font-semibold text-sm hover:bg-gray-100">
+        <Link to="/admin/seed" className="inline-flex items-center gap-2 bg-white text-[#059669] px-5 py-2 rounded-md font-semibold text-sm hover:bg-gray-100">
           Seed Initial Content <ArrowRight className="w-4 h-4" />
         </Link>
       </div>

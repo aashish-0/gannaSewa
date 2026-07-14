@@ -22,8 +22,8 @@ const CorporateCSR = () => {
           </div>
           <div className="grid md:grid-cols-4 gap-6">
             {features.map((f, i) => (
-              <div key={i} className="bg-white rounded-lg p-6 shadow-md text-center hover:shadow-xl transition-shadow border-t-4 border-[#ec008c]">
-                <f.Icon className="w-10 h-10 text-[#ec008c] mx-auto mb-4" />
+              <div key={i} className="bg-white rounded-lg p-6 shadow-md text-center hover:shadow-xl transition-shadow border-t-4 border-[#059669]">
+                <f.Icon className="w-10 h-10 text-[#059669] mx-auto mb-4" />
                 <h3 className="font-bold text-lg mb-2">{f.title}</h3>
                 <p className="text-sm text-gray-600">{f.text}</p>
               </div>
@@ -42,7 +42,7 @@ const CorporateCSR = () => {
             ))}
           </div>
           <div className="text-center mt-10">
-            <Link to="/contact" className="inline-block bg-[#ec008c] hover:bg-[#c70074] text-white px-8 py-3 rounded-full font-semibold">Discuss CSR Partnership</Link>
+            <Link to="/contact" className="inline-block bg-[#059669] hover:bg-[#047857] text-white px-8 py-3 rounded-full font-semibold">Discuss CSR Partnership</Link>
           </div>
         </div>
       </section>

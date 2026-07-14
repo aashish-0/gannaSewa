@@ -63,14 +63,14 @@ const UsersAdmin = () => {
           <h1 className="text-2xl font-bold text-gray-900">Admin Users</h1>
           <p className="text-sm text-gray-500 mt-1">Manage who can access this admin panel and their permissions.</p>
         </div>
-        <button onClick={() => setModalOpen(true)} className="inline-flex items-center gap-2 bg-[#ec008c] hover:bg-[#c70074] text-white px-4 py-2 rounded-md text-sm font-medium">
+        <button onClick={() => setModalOpen(true)} className="inline-flex items-center gap-2 bg-[#059669] hover:bg-[#047857] text-white px-4 py-2 rounded-md text-sm font-medium">
           <UserPlus className="w-4 h-4" /> Add User
         </button>
       </div>
 
       <div className="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden">
         {loading ? (
-          <div className="p-12 flex justify-center"><Loader2 className="w-6 h-6 animate-spin text-[#ec008c]" /></div>
+          <div className="p-12 flex justify-center"><Loader2 className="w-6 h-6 animate-spin text-[#059669]" /></div>
         ) : (
           <table className="w-full text-sm">
             <thead className="bg-gray-50 text-left text-gray-600 text-xs uppercase tracking-wider">
@@ -121,15 +121,15 @@ const UsersAdmin = () => {
             <form onSubmit={onCreate} className="p-6 space-y-4">
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">Name</label>
-                <input required value={form.name} onChange={(e) => setForm({...form, name: e.target.value})} className="w-full border border-gray-300 rounded-md px-3 py-2 outline-none focus:ring-2 focus:ring-[#ec008c] text-sm" />
+                <input required value={form.name} onChange={(e) => setForm({...form, name: e.target.value})} className="w-full border border-gray-300 rounded-md px-3 py-2 outline-none focus:ring-2 focus:ring-[#059669] text-sm" />
               </div>
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">Email</label>
-                <input required type="email" value={form.email} onChange={(e) => setForm({...form, email: e.target.value})} className="w-full border border-gray-300 rounded-md px-3 py-2 outline-none focus:ring-2 focus:ring-[#ec008c] text-sm" />
+                <input required type="email" value={form.email} onChange={(e) => setForm({...form, email: e.target.value})} className="w-full border border-gray-300 rounded-md px-3 py-2 outline-none focus:ring-2 focus:ring-[#059669] text-sm" />
               </div>
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">Password</label>
-                <input required type="password" minLength={6} value={form.password} onChange={(e) => setForm({...form, password: e.target.value})} className="w-full border border-gray-300 rounded-md px-3 py-2 outline-none focus:ring-2 focus:ring-[#ec008c] text-sm" />
+                <input required type="password" minLength={6} value={form.password} onChange={(e) => setForm({...form, password: e.target.value})} className="w-full border border-gray-300 rounded-md px-3 py-2 outline-none focus:ring-2 focus:ring-[#059669] text-sm" />
                 <p className="text-xs text-gray-500 mt-1">Min 6 characters</p>
               </div>
               <div>
@@ -138,7 +138,7 @@ const UsersAdmin = () => {
                   {ROLES.map((r) => <option key={r.value} value={r.value}>{r.label}</option>)}
                 </select>
               </div>
-              <button type="submit" disabled={saving} className="w-full bg-[#ec008c] hover:bg-[#c70074] text-white py-2.5 rounded-md font-medium disabled:opacity-60 flex items-center justify-center gap-2">
+              <button type="submit" disabled={saving} className="w-full bg-[#059669] hover:bg-[#047857] text-white py-2.5 rounded-md font-medium disabled:opacity-60 flex items-center justify-center gap-2">
                 {saving && <Loader2 className="w-4 h-4 animate-spin" />}
                 Create User
               </button>

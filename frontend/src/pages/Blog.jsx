@@ -26,9 +26,9 @@ const Blog = () => {
                     <span className="flex items-center gap-1"><Calendar className="w-3.5 h-3.5" /> {p.date}</span>
                     <span className="flex items-center gap-1"><User className="w-3.5 h-3.5" /> {p.author}</span>
                   </div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-[#ec008c] transition-colors line-clamp-2">{p.title}</h3>
+                  <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-[#059669] transition-colors line-clamp-2">{p.title}</h3>
                   <p className="text-sm text-gray-600 mb-4 line-clamp-3">{p.excerpt}</p>
-                  <a href="#" className="inline-flex items-center gap-2 text-[#ec008c] font-semibold text-sm">Read More <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" /></a>
+                  <a href="#" className="inline-flex items-center gap-2 text-[#059669] font-semibold text-sm">Read More <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" /></a>
                 </div>
               </article>
             ))}

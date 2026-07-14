@@ -12,14 +12,14 @@ const AlwaysOpenSection = () => {
     >
       <div className="container-x grid md:grid-cols-2 gap-10 items-center">
         <div className="text-white">
-          <h3 className="text-[#ec008c] uppercase tracking-widest text-sm font-semibold mb-2">Always Open</h3>
+          <h3 className="text-[#059669] uppercase tracking-widest text-sm font-semibold mb-2">Always Open</h3>
           <h2 className="text-3xl md:text-5xl font-bold mb-6">Listen, Act, Learn. Repeat</h2>
           <p className="text-white/90 leading-relaxed mb-8 max-w-lg">
             Gana Seva Foundation is on a mission to promote girl child education in India providing basic and life-skill education amongst the underprivileged women. Contribute towards building a strong foundation for nation through women empowerment and development programs.
           </p>
           <a
             href="#donate"
-            className="inline-flex items-center gap-2 bg-[#ec008c] hover:bg-[#c70074] transition-colors text-white px-8 py-3 rounded-full font-semibold shadow-lg"
+            className="inline-flex items-center gap-2 bg-[#059669] hover:bg-[#047857] transition-colors text-white px-8 py-3 rounded-full font-semibold shadow-lg"
           >
             Donate to Girl Child Education
             <Heart className="w-4 h-4 fill-white" />

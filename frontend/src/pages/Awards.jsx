@@ -17,14 +17,14 @@ const Awards = () => {
           </div>
           <div className="space-y-6">
             {items.map((a) => (
-              <div key={a.id} className="flex flex-col md:flex-row gap-6 items-start bg-white p-6 rounded-lg shadow-md border-l-4 border-[#ec008c] hover:shadow-xl transition-shadow">
-                <div className="flex-shrink-0 w-16 h-16 rounded-full bg-[#fce4f0] flex items-center justify-center"><Trophy className="w-8 h-8 text-[#ec008c]" /></div>
+              <div key={a.id} className="flex flex-col md:flex-row gap-6 items-start bg-white p-6 rounded-lg shadow-md border-l-4 border-[#059669] hover:shadow-xl transition-shadow">
+                <div className="flex-shrink-0 w-16 h-16 rounded-full bg-[#fce4f0] flex items-center justify-center"><Trophy className="w-8 h-8 text-[#059669]" /></div>
                 <div className="flex-1">
                   <div className="flex flex-wrap items-center gap-3 mb-2">
-                    <span className="bg-[#ec008c] text-white text-xs font-bold px-3 py-1 rounded-full">{a.year}</span>
+                    <span className="bg-[#059669] text-white text-xs font-bold px-3 py-1 rounded-full">{a.year}</span>
                     <h3 className="text-xl font-bold text-gray-900">{a.title}</h3>
                   </div>
-                  <p className="text-sm text-[#ec008c] font-medium mb-2">by {a.org}</p>
+                  <p className="text-sm text-[#059669] font-medium mb-2">by {a.org}</p>
                   <p className="text-gray-600 text-sm">{a.desc}</p>
                 </div>
               </div>
