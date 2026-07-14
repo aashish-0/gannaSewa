@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { collection, getDocs, getDoc, doc } from "firebase/firestore";
+import { collection, getDocs } from "firebase/firestore";
 import { db } from "../../lib/firebase";
 import { Users, FileText, Camera, BookOpen, TrendingUp, ArrowRight } from "lucide-react";
 import { useAuth } from "../../context/AuthContext";
