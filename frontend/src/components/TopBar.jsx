@@ -1,5 +1,5 @@
 import React from "react";
-import { Phone, Mail, ShoppingCart, Facebook, Instagram, Twitter, Linkedin, Youtube } from "lucide-react";
+import { Phone, Mail, Facebook, Instagram, Twitter, Linkedin, Youtube } from "lucide-react";
 import { brand, social } from "../data/mock";
 
 const TopBar = () => {

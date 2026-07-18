@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, NavLink, Outlet, useNavigate } from "react-router-dom";
-import { LayoutDashboard, Image, FileText, Users, Newspaper, Award, Briefcase, Camera, Building2, Star, Settings, LogOut, Menu, X, ExternalLink, Home, BookOpen, Heart } from "lucide-react";
+import { LayoutDashboard, Image, FileText, Users, Newspaper, Award, Briefcase, Camera, Building2, Star, Settings, LogOut, Menu, ExternalLink, Home, BookOpen, Heart } from "lucide-react";
 import { useAuth } from "../context/AuthContext";
 
 const navGroups = [
