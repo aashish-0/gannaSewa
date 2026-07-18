@@ -4,12 +4,14 @@ import { Eye, Compass, CheckCircle2 } from "lucide-react";
 
 const VisionMission = () => {
   const values = [
-    "Empower every girl child with quality education",
-    "Ensure nutritional security for underprivileged families",
-    "Advocate for women's economic independence",
-    "Respond swiftly during natural disasters",
-    "Build sustainable community partnerships",
-    "Maintain complete transparency in operations"
+    "Mobilize resources from those with abundance, or who want to give back",
+    "Deliver accessible, region-specific skill development and vocational training",
+    "Advance women and child welfare, education, and literacy",
+    "Protect the environment through afforestation and sustainable practices",
+    "Support rural and urban development and minority welfare",
+    "Build Self-Help Groups (SHGs) for lasting economic independence",
+    "Respond to disasters with community-based preparedness and resilience",
+    "Maintain complete transparency and accountability in our operations"
   ];
   return (
     <>
@@ -21,14 +23,14 @@ const VisionMission = () => {
               <Eye className="w-7 h-7 text-white" />
             </div>
             <h2 className="text-3xl font-bold text-[#059669] mb-4">Our Vision</h2>
-            <p className="text-gray-700 leading-relaxed text-lg">A society where every girl child is educated, empowered, and equipped with equal opportunities to build the life she dreams of &mdash; regardless of her circumstances.</p>
+            <p className="text-gray-700 leading-relaxed text-lg">A future where dignified employment, economic independence, and social inclusion are within reach for every underserved community in India &mdash; regardless of geography, gender, or circumstance.</p>
           </div>
           <div className="bg-[#faf6f2] rounded-2xl p-10 shadow-sm">
             <div className="w-14 h-14 rounded-full bg-[#059669] flex items-center justify-center mb-5">
               <Compass className="w-7 h-7 text-white" />
             </div>
             <h2 className="text-3xl font-bold text-[#059669] mb-4">Our Mission</h2>
-            <p className="text-gray-700 leading-relaxed text-lg">To promote basic and life-skill education amongst underprivileged women and girl children in India by delivering focused programs in education, nutrition, health, and empowerment across communities that need them most.</p>
+            <p className="text-gray-700 leading-relaxed text-lg">Empowering India&rsquo;s underserved communities through accessible skill development and sustainable livelihood opportunities. We bridge the gap between potential and prosperity by mobilizing resources from those who have in abundance, or want to pay back to society, to create pathways to dignified employment, economic independence, and social inclusion for all.</p>
           </div>
         </div>
       </section>

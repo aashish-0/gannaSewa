@@ -7,14 +7,15 @@ const AboutSection = () => {
     <section id="about" className="py-16 md:py-24 bg-white">
       <div className="container-x grid md:grid-cols-2 gap-10 md:gap-16 items-center">
         <div>
-          <h3 className="text-[#059669] font-bold uppercase text-sm tracking-widest mb-3">Gana Sewa Foundation</h3>
-          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">Helping Today. Helping Tomorrow</h2>
+          <h3 className="text-[#059669] font-bold uppercase text-sm tracking-widest mb-3">Gana Sewa</h3>
+          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">Bridging Potential and Prosperity</h2>
           <p className="text-gray-600 leading-relaxed mb-8">
-            We nurture underprivileged girl child section of the society, help needy child, work upon women
-            empowerment for a strong nation building, get the right medical aid, outreach to outskirts and
-            make education available for literacy & organize special need based program&rsquo;s&hellip;we at
-            Gana Sewa Foundation want to seek all round development and well being of a girl child,
-            regardless of circumstances they belong too.
+            Gana Sewa is a registered society working since 2008 to empower India&rsquo;s underserved
+            communities through accessible skill development and sustainable livelihood opportunities.
+            We mobilize resources from those who want to give back, building pathways to dignified
+            employment, economic independence, and social inclusion &mdash; across women and child welfare,
+            skill development, education and literacy, environment and forests, rural and urban
+            development, minority welfare, and self-help group formation.
           </p>
           <div className="flex flex-wrap gap-4">
             <Link to="/about/our-story" className="bg-[#059669] hover:bg-[#047857] transition-colors text-white px-7 py-3 rounded-full font-semibold shadow-md">Read More</Link>
@@ -24,7 +25,7 @@ const AboutSection = () => {
           </div>
         </div>
         <div className="relative">
-          <img src="https://shikshaseva.org/wp-content/uploads/2021/09/Helping-Today-Helping-tomorrow-.jpg" alt="Helping Today. Helping Tomorrow" className="rounded-lg shadow-xl w-full" />
+          <img src="/images/about/office-front.jpg" alt="Gana Sewa skill development training" className="rounded-lg shadow-xl w-full" />
         </div>
       </div>
     </section>

@@ -6,14 +6,14 @@ import AboutSection from "../components/AboutSection";
 import CausesSection from "../components/CausesSection";
 import ProfileCTA from "../components/ProfileCTA";
 import ProgramsSection from "../components/ProgramsSection";
-import CelebrityPartners from "../components/CelebrityPartners";
 import AlwaysOpenSection from "../components/AlwaysOpenSection";
 import ImpactReport from "../components/ImpactReport";
 import StoriesSection from "../components/StoriesSection";
-import InstagramGallery from "../components/InstagramGallery";
-import Accreditations from "../components/Accreditations";
-import CorporatePartners from "../components/CorporatePartners";
 import Footer from "../components/Footer";
+// NOTE: CelebrityPartners, InstagramGallery, Accreditations, and CorporatePartners
+// were removed from the homepage — the source proposal didn't include real
+// celebrity endorsements, gallery photos, accreditation logos, or partner logos.
+// Re-add these once Gana Sewa supplies real assets (see src/data/mock.js notes).
 import WhatsAppButton from "../components/WhatsAppButton";
 
 const Home = () => {
@@ -26,13 +26,9 @@ const Home = () => {
       <CausesSection />
       <ProfileCTA />
       <ProgramsSection />
-      <CelebrityPartners />
       <AlwaysOpenSection />
       <ImpactReport />
       <StoriesSection />
-      <InstagramGallery />
-      <Accreditations />
-      <CorporatePartners />
       <Footer />
       <WhatsAppButton />
     </div>

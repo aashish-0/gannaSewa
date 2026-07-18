@@ -14,18 +14,53 @@ const Footer = () => {
 
   return (
     <footer className="bg-[#1a1a1a] text-gray-300">
-      <div className="bg-[#059669] py-10">
-        <div className="container-x flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="text-white text-center md:text-left">
-            <h3 className="text-2xl md:text-3xl font-bold mb-1">Make a Difference Today</h3>
-            <p className="text-white/90">{brand.taxNote}</p>
+
+      {/* Updated CTA Banner */}
+      <div className="bg-[#059669] py-10 md:py-14 px-4">
+        <div className="container-x flex flex-col items-center text-center gap-5 md:gap-6">
+
+          {/* Top Heading - Scales from 18px (mobile) to 22px (tablet) to 28px (desktop) */}
+          <h2 className="text-white text-[18px] md:text-[22px] lg:text-[28px] font-bold uppercase leading-snug flex flex-col xl:flex-row items-center justify-center gap-2 xl:gap-3">
+            <span>ONE OPPORTUNITY CAN CHANGE A FAMILY</span>
+            <span className="hidden xl:block font-light text-white/50 px-1">|</span>
+            <span>ONE SKILL CAN CHANGE A LIFE</span>
+            <span className="hidden xl:block font-light text-white/50 px-1">|</span>
+            <span>ONE DONATION CAN CHANGE A COMMUNITY</span>
+          </h2>
+
+          {/* Middle Paragraphs - Scales from 16px (mobile) to 20px (tablet) to 24px (desktop) */}
+          <div className="text-white text-[16px] md:text-[20px] lg:text-[24px] space-y-3 mt-2 px-2 md:px-0">
+            <p className="font-normal">
+              Join us in empowering women, supporting children and creating sustainable livelihoods for those who need it most.
+            </p>
+            <p className="font-bold">
+              Be the reason someone gets a better future today!
+            </p>
           </div>
-          <Link to="/donate" className="bg-white text-[#059669] px-8 py-3 rounded-full font-bold shadow-lg hover:bg-gray-100 transition-colors flex items-center gap-2">
-            Donate Now <Heart className="w-4 h-4 fill-[#059669]" />
-          </Link>
+
+          {/* Button & Tax Note */}
+          <div className="flex flex-col items-center gap-3 mt-4 md:mt-6">
+
+            {/* Button - Scales from 16px (mobile) to 18px (desktop), padding adjusts slightly */}
+            <Link
+              to="/donate"
+              className="group bg-white text-[#059669] px-8 py-3 md:px-10 md:py-4 rounded-full font-bold text-[16px] md:text-[18px] shadow-lg hover:shadow-xl hover:bg-gray-50 transition-all duration-300 flex items-center justify-center gap-2 transform hover:-translate-y-1"
+            >
+              DONATE NOW
+              <Heart className="w-5 h-5 fill-[#059669] group-hover:scale-110 transition-transform duration-300" />
+            </Link>
+
+            {/* Tax Note - Scales from 12px (text-xs) to 14px (text-sm) */}
+            <p className="text-white/90 text-xs md:text-sm italic font-medium mt-1">
+              * Donations exempted under 80G of the Income Tax Act 1961
+            </p>
+
+          </div>
+
         </div>
       </div>
 
+      {/* Rest of the original footer */}
       <div className="container-x py-14 grid md:grid-cols-4 gap-10">
         <div>
           <div className="flex items-center gap-3 mb-4">

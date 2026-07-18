@@ -18,8 +18,12 @@ const Team = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {members.map((m) => (
               <div key={m.id} className="bg-white rounded-lg shadow-md overflow-hidden group hover:shadow-2xl transition-shadow">
-                <div className="aspect-[4/5] overflow-hidden">
-                  <img src={m.image} alt={m.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <div className="aspect-[4/5] overflow-hidden bg-[#faf6f2] flex items-center justify-center">
+                  {m.image ? (
+                    <img src={m.image} alt={m.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  ) : (
+                    <span className="text-4xl font-bold text-[#059669]">{m.name.split(" ").map((n) => n[0]).join("")}</span>
+                  )}
                 </div>
                 <div className="p-6 text-center">
                   <h3 className="text-xl font-bold text-gray-900">{m.name}</h3>

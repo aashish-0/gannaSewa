@@ -10,20 +10,20 @@ const OurStory = () => {
       <section className="py-16 md:py-20">
         <div className="container-x grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h3 className="text-[#059669] font-bold uppercase text-sm tracking-widest mb-3">Since 2012</h3>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">A Journey of Compassion and Change</h2>
+            <h3 className="text-[#059669] font-bold uppercase text-sm tracking-widest mb-3">Since 2008</h3>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">A Journey Rooted in Assam, Reaching Across India</h2>
             <p className="text-gray-600 leading-relaxed mb-4">
-              Gana Sewa Foundation was born from a simple yet powerful belief: every girl child deserves the right to education, health, and a life of dignity. Founded in 2012 by a small group of committed volunteers in Mumbai, we started with just 15 children in a Dharavi community center.
+              Gana Sewa was registered as a society in 2008, with its registered office in Guwahati, Assam. What began as grassroots work in the state has grown into a track record of State and Central Government projects, averaging roughly &#8377;75 lakhs in annual turnover over the last three years.
             </p>
             <p className="text-gray-600 leading-relaxed mb-4">
-              Today, over a decade later, we work across 8 states, serving hundreds of thousands of women and girls. What began as a weekend teaching initiative has grown into a full-fledged NGO with programs spanning education, nutrition, healthcare, women empowerment, and disaster relief.
+              Today, our work spans women and child welfare, skill development, education and literacy, environment and forests, rural and urban development, minority welfare, and self-help group (SHG) formation &mdash; with active project proposals reaching communities in Assam, Punjab, Gujarat, Madhya Pradesh, and Himachal Pradesh.
             </p>
             <p className="text-gray-600 leading-relaxed">
-              Our journey has been powered by ordinary people doing extraordinary things &mdash; teachers, volunteers, donors, celebrities, and corporate partners who believe that when you educate a girl, you transform a nation.
+              Our current portfolio includes mobile health outreach, tree plantation and ecological restoration, vocational skill training for youth and women, community disaster preparedness, solar energy access for schools and hospitals, and dignified cremation infrastructure &mdash; each designed with the communities we serve, not just for them.
             </p>
           </div>
           <div>
-            <img src="https://shikshaseva.org/wp-content/uploads/2021/09/Helping-Today-Helping-tomorrow-.jpg" alt="Our story" className="rounded-lg shadow-xl w-full" />
+           <img src="/images/about/our-story.jpg" alt="Gana Sewa skill training in session" className="rounded-lg shadow-xl w-full" />
           </div>
         </div>
       </section>

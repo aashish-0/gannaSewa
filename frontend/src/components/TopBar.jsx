@@ -28,13 +28,6 @@ const TopBar = () => {
           </a>
         </div>
         <div className="flex items-center gap-4">
-          <button className="bg-[#059669] hover:bg-[#047857] transition-colors text-white px-5 py-2 rounded-full flex items-center gap-2 font-medium text-sm shadow-md">
-            <ShoppingCart className="w-4 h-4" /> Shop for a Cause
-          </button>
-          <div className="flex items-center gap-1 text-gray-700">
-            <ShoppingCart className="w-5 h-5" />
-            <span className="bg-[#059669] text-white text-xs w-5 h-5 rounded-full flex items-center justify-center font-semibold">0</span>
-          </div>
           <div className="flex items-center gap-2 ml-2">
             {socials.map(({ Icon, href }, i) => (
               <a key={i} href={href} className="w-8 h-8 rounded-full bg-[#059669] hover:bg-[#047857] transition-colors flex items-center justify-center text-white">

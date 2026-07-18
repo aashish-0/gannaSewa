@@ -1,50 +1,65 @@
-import React, { useState, useEffect } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import React from "react";
 import { useCollection } from "../hooks/useContent";
 import { heroSlides as fallback } from "../data/mock";
 
-const HeroSlider = () => {
+const HeroSection = () => {
+  // Grab your data, but we only use the first item since it is no longer a slider
   const slides = useCollection("heroSlides", fallback);
-  const [current, setCurrent] = useState(0);
-
-  useEffect(() => {
-    if (slides.length <= 1) return;
-    const t = setInterval(() => setCurrent((c) => (c + 1) % slides.length), 5000);
-    return () => clearInterval(t);
-  }, [slides.length]);
-
-  useEffect(() => { if (current >= slides.length) setCurrent(0); }, [slides.length, current]);
-
-  const goPrev = () => setCurrent((c) => (c - 1 + slides.length) % slides.length);
-  const goNext = () => setCurrent((c) => (c + 1) % slides.length);
+  const data = slides.length > 0 ? slides[0] : fallback[0];
 
   return (
-    <section id="home" className="relative w-full overflow-hidden bg-gray-100" style={{ height: "clamp(320px, 55vw, 720px)" }}>
-      {slides.map((s, i) => (
-        <div key={s.id || i} className={`absolute inset-0 transition-opacity duration-1000 ${i === current ? "opacity-100 z-10" : "opacity-0 z-0"}`}>
-          <img src={s.image} alt={s.alt || ""} className="w-full h-full object-cover object-center" />
-          {s.title && i === current && (
-            <div className="absolute inset-0 flex items-center">
-              <div className="container-x">
-                <div className="max-w-xl text-white slide-fade">
-                  <h2 className="text-4xl md:text-6xl font-bold mb-4 capitalize drop-shadow-lg">{s.title}</h2>
-                  {s.subtitle && <p className="text-lg md:text-2xl mb-6 drop-shadow-md">{s.subtitle}</p>}
-                  {s.cta && <a href={s.link || "#"} className="inline-block bg-[#ec008c] hover:bg-[#c70074] transition-colors text-white px-8 py-3 rounded-full font-semibold shadow-lg">{s.cta}</a>}
-                </div>
-              </div>
-            </div>
-          )}
-        </div>
-      ))}
-      <button onClick={goPrev} className="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-white/70 hover:bg-white text-gray-700 flex items-center justify-center shadow-md transition-colors"><ChevronLeft className="w-6 h-6" /></button>
-      <button onClick={goNext} className="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-white/70 hover:bg-white text-gray-700 flex items-center justify-center shadow-md transition-colors"><ChevronRight className="w-6 h-6" /></button>
-      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 flex gap-2">
-        {slides.map((_, i) => (
-          <button key={i} onClick={() => setCurrent(i)} className={`w-2.5 h-2.5 rounded-full transition-all ${i === current ? "bg-[#ec008c] w-8" : "bg-white/80"}`} />
-        ))}
+    <section id="home" className="relative w-full flex items-center bg-gray-900" style={{ minHeight: "clamp(450px, 75vw, 800px)" }}>
+
+      {/* Background Image & Dark Overlay */}
+      <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 bg-black/50 z-10" />
+        <img
+          src={data?.image || "/default-hero.jpg"}
+          alt={data?.alt || "Women in training"}
+          className="w-full h-full object-cover object-center"
+        />
       </div>
+
+      {/* Foreground Content */}
+      <div className="container-x relative z-20 w-full py-16">
+        <div className="max-w-4xl text-white">
+
+          {/* Main Headline */}
+          <p className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 tracking-tight leading-tight drop-shadow-lg">
+            Empowering Women. <br className="hidden md:block" />
+            Transforming Families. <br className="hidden md:block" />
+            Building Stronger Communities.
+          </p>
+
+          {/* 2-Line Description */}
+          <p className="text-lg md:text-xl lg:text-2xl mb-10 max-w-2xl drop-shadow-md leading-relaxed text-white/95">
+            Join us in providing essential skills, resources, and opportunities to create sustainable livelihoods for those who need it most.
+          </p>
+
+          {/* Three High-Converting Buttons */}
+          <div className="flex flex-col sm:flex-row flex-wrap gap-4">
+
+            {/* Primary Button */}
+            <a href="/donate" className="bg-[#059669] hover:bg-[#047857] text-white px-8 py-3.5 rounded-full font-bold shadow-lg transition-transform hover:-translate-y-1 text-center text-lg">
+              Donate Now
+            </a>
+
+            {/* Secondary Button */}
+            <a href="/sponsor" className="bg-white text-[#ec008c] hover:bg-gray-100 px-8 py-3.5 rounded-full font-bold shadow-lg transition-transform hover:-translate-y-1 text-center text-lg">
+              Sponsor a Woman
+            </a>
+
+            {/* Tertiary Button */}
+            <a href="/impact" className="bg-transparent border-2 border-white text-white hover:bg-white/10 px-8 py-3.5 rounded-full font-bold shadow-lg transition-transform hover:-translate-y-1 text-center text-lg">
+              View Our Impact
+            </a>
+
+          </div>
+        </div>
+      </div>
+
     </section>
   );
 };
 
-export default HeroSlider;
+export default HeroSection;

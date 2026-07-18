@@ -16,6 +16,9 @@ const PressRelease = () => {
             <p className="text-gray-600">Media coverage of our programs, impact stories, and initiatives.</p>
           </div>
           <div className="space-y-4">
+            {items.length === 0 && (
+              <p className="text-center text-gray-500 italic">No press coverage to display yet — check back soon.</p>
+            )}
             {items.map((p) => (
               <a key={p.id} href={p.link || "#"} target={p.link ? "_blank" : undefined} rel="noreferrer" className="flex items-start gap-4 bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow border-l-4 border-[#059669] group">
                 <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#fce4f0] flex items-center justify-center"><Newspaper className="w-6 h-6 text-[#059669]" /></div>

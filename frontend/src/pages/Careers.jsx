@@ -7,7 +7,7 @@ import { openPositions as fallback } from "../data/mock";
 
 const Careers = () => {
   const jobs = useCollection("careers", fallback);
-  const apply = (title) => toast({ title: `Application initiated for ${title}`, description: "Please share your CV at careers@gannasewa.in" });
+  const apply = (title) => toast({ title: `Application initiated for ${title}`, description: "Please share your CV at ganasewa.india@gmail.com" });
   return (
     <>
       <PageBanner title="Careers" breadcrumbs={[{ label: "Careers" }]} />
@@ -18,6 +18,9 @@ const Careers = () => {
             <p className="text-gray-600">Join a team that goes to work every day with the goal of changing lives. We're always looking for passionate, mission-driven people.</p>
           </div>
           <div className="space-y-5">
+            {jobs.length === 0 && (
+              <p className="text-center text-gray-500 italic">No open positions right now — send us your CV below and we'll reach out when a role opens up.</p>
+            )}
             {jobs.map((j) => (
               <div key={j.id} className="bg-white rounded-lg shadow-md p-6 flex flex-col md:flex-row md:items-center justify-between gap-4 border-l-4 border-[#059669] hover:shadow-xl transition-shadow">
                 <div>
@@ -37,7 +40,7 @@ const Careers = () => {
           <div className="mt-12 bg-[#faf6f2] rounded-lg p-8 text-center">
             <h3 className="text-xl font-bold text-gray-900 mb-2">Don&rsquo;t see the right role?</h3>
             <p className="text-gray-600 mb-4">We're always keen to hear from talented people. Send us your CV.</p>
-            <a href="mailto:careers@gannasewa.in" className="inline-block bg-[#059669] hover:bg-[#047857] text-white px-8 py-3 rounded-full font-semibold">careers@gannasewa.in</a>
+            <a href="mailto:ganasewa.india@gmail.com" className="inline-block bg-[#059669] hover:bg-[#047857] text-white px-8 py-3 rounded-full font-semibold">ganasewa.india@gmail.com</a>
           </div>
         </div>
       </section>

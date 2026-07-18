@@ -92,10 +92,10 @@ const SeedAdmin = () => {
       <div className="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden">
         <div className="px-6 py-4 border-b border-gray-100 flex justify-between items-center">
           <div className="flex items-center gap-2">
-            <Database className="w-5 h-5 text-[#ec008c]" />
+            <Database className="w-5 h-5 text-[#059669]" />
             <span className="font-semibold text-gray-900">Content to be seeded</span>
           </div>
-          <button onClick={runSeed} disabled={running} className="inline-flex items-center gap-2 bg-[#ec008c] hover:bg-[#c70074] text-white px-5 py-2 rounded-md text-sm font-medium disabled:opacity-60">
+          <button onClick={runSeed} disabled={running} className="inline-flex items-center gap-2 bg-[#059669] hover:bg-[#047857] text-white px-5 py-2 rounded-md text-sm font-medium disabled:opacity-60">
             {running ? <Loader2 className="w-4 h-4 animate-spin" /> : <Database className="w-4 h-4" />}
             {running ? "Seeding..." : "Run Seed"}
           </button>

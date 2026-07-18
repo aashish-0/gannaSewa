@@ -28,7 +28,7 @@ const Header = () => {
           </div>
         </Link>
 
-        <nav className="hidden lg:flex items-center gap-1 ml-auto mr-6" style={{ marginLeft: "180px" }}>
+        <nav className="hidden lg:flex items-center gap-1 ml-auto mr-6" style={{ marginLeft: "280px" }}>
           {navigation.map((item) => (
             <div key={item.name} className="relative group">
               <Link

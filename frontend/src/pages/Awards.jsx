@@ -16,6 +16,9 @@ const Awards = () => {
             <p className="text-gray-600">Awards are a reflection of the incredible work our teams, partners, and beneficiaries do every day.</p>
           </div>
           <div className="space-y-6">
+            {items.length === 0 && (
+              <p className="text-center text-gray-500 italic">No awards to display yet — check back soon.</p>
+            )}
             {items.map((a) => (
               <div key={a.id} className="flex flex-col md:flex-row gap-6 items-start bg-white p-6 rounded-lg shadow-md border-l-4 border-[#059669] hover:shadow-xl transition-shadow">
                 <div className="flex-shrink-0 w-16 h-16 rounded-full bg-[#fce4f0] flex items-center justify-center"><Trophy className="w-8 h-8 text-[#059669]" /></div>

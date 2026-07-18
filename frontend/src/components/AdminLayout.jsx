@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, NavLink, Outlet, useNavigate } from "react-router-dom";
-import { LayoutDashboard, Image, FileText, Users, Newspaper, Award, Briefcase, Camera, Building2, Star, Settings, LogOut, Menu, ExternalLink, Home, BookOpen, Heart } from "lucide-react";
+import { LayoutDashboard, Image, FileText, Users, Newspaper, Award, Briefcase, Camera, Building2, Star, Settings, LogOut, Menu, X, ExternalLink, Home, BookOpen, Heart } from "lucide-react";
 import { useAuth } from "../context/AuthContext";
 
 const navGroups = [
@@ -61,7 +61,7 @@ const AdminLayout = () => {
           <Link to="/admin" className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-full bg-[#059669] flex items-center justify-center text-white font-bold">GS</div>
             <div>
-              <div className="font-bold text-gray-900 text-sm">Ganna Sewa</div>
+              <div className="font-bold text-gray-900 text-sm">Gana Sewa</div>
               <div className="text-xs text-gray-500">Admin Panel</div>
             </div>
           </Link>

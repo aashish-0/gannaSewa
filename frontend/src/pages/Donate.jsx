@@ -18,7 +18,7 @@ const UPI_DETAILS = {
   upiId: "gannasewa@upi",
 
   // 3. Replace with your organization name (as registered on UPI)
-  payeeName: "Gana Sewa Foundation"
+  payeeName: "Gana Sewa"
 };
 
 // ============================================================
@@ -129,7 +129,7 @@ const Donate = () => {
 
                 <div className="flex items-center justify-center gap-2 text-xs text-gray-500 mt-4">
                   <ShieldCheck className="w-4 h-4 text-green-500" />
-                  Your donation is 100% secure & goes directly to Gana Sewa Foundation
+                  Your donation is 100% secure & goes directly to Gana Sewa
                 </div>
               </div>
             </div>
