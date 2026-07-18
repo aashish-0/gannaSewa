@@ -28,12 +28,12 @@ const Header = () => {
           </div>
         </Link>
 
-        <nav className="hidden lg:flex items-center gap-1 ml-auto mr-6" style={{ marginLeft: "280px" }}>
+        <nav className="hidden lg:flex items-center gap-5 ml-auto mr-6" style={{ marginLeft: "280px" }}>
           {navigation.map((item) => (
             <div key={item.name} className="relative group">
               <Link
                 to={item.href}
-                className={`px-4 py-6 text-white font-medium text-sm flex items-center gap-1 hover:text-white/80 transition-colors border-b-2 ${isActive(item.href) ? "border-white" : "border-transparent"} hover:border-white`}
+                className={`py-6 text-white font-medium text-sm flex items-center gap-1 hover:text-white/80 transition-colors border-b-2 ${isActive(item.href) ? "border-white" : "border-transparent"} hover:border-white`}
               >
                 {item.name}
                 {item.children && <ChevronDown className="w-4 h-4" />}

@@ -12,13 +12,13 @@ const UPI_DETAILS = {
   //              then set: qrImage: "/images/upi-qr.png"
   //    Option B: Use any hosted image URL
   //    Currently showing a placeholder QR image.
-  qrImage: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/QR_code_for_mobile_English_Wikipedia.svg/1200px-QR_code_for_mobile_English_Wikipedia.svg.png",
+  qrImage: "/images/QRCode.jpeg",
 
   // 2. Replace with your actual UPI ID
-  upiId: "gannasewa@upi",
+  upiId: "msganasewa.eazypay@icici",
 
   // 3. Replace with your organization name (as registered on UPI)
-  payeeName: "Gana Sewa"
+  payeeName: "M/S.GANA SEWA"
 };
 
 // ============================================================

@@ -32,8 +32,8 @@ const ImpactReport = () => {
   return (
     <section className="py-16 md:py-20 relative bg-white" style={{ backgroundImage: "radial-gradient(circle at 20% 80%, rgba(236,0,140,0.04) 0%, transparent 40%), radial-gradient(circle at 80% 20%, rgba(236,0,140,0.04) 0%, transparent 40%)" }}>
       <div className="container-x">
-        <h2 className="section-heading text-3xl md:text-4xl">Impact Countries</h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-5 mt-10">
+        <h2 className="section-heading text-3xl md:text-4xl">Our Impact So Far</h2>
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5 mt-10">
           {stats.map((s) => (
             <div key={s.id} className="impact-card">
               <div className="text-3xl md:text-4xl font-bold text-gray-900">
