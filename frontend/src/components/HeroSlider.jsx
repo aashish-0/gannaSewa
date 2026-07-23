@@ -15,7 +15,7 @@ const HeroSection = () => {
   const home = useDoc("content/home", {});
 
   const slide = slides.length > 0 ? slides[0] : heroFallback[0];
-  const bg = settings.heroBg || slide?.image || "/default-hero.jpg";
+  // const bg = settings.heroBg || slide?.image || "/default-hero.jpg";
 
   const headline = home.heroHeadline || "Empowering Women. Transforming Families. Building Stronger Communities.";
   const subtitle = home.heroSubtitle ||

@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import PageBanner from "../components/PageBanner";
-import { QrCode, Copy, CheckCircle2, Heart, ShieldCheck, ChevronLeft, ChevronRight, Sprout, Droplets, GraduationCap, BadgeCheck } from "lucide-react";
+import { QrCode, Copy, CheckCircle2, Heart, ShieldCheck, ChevronLeft, ChevronRight, BadgeCheck } from "lucide-react";
 import { toast } from "../hooks/use-toast";
 
 // ============================================================
