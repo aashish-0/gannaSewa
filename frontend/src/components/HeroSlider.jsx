@@ -11,10 +11,10 @@ import { heroSlides as heroFallback } from "../data/mock";
  */
 const HeroSection = () => {
   const slides = useCollection("heroSlides", heroFallback);
-  const settings = useDoc("content/settings", {});
+  // const settings = useDoc("content/settings", {});
   const home = useDoc("content/home", {});
 
-  const slide = slides.length > 0 ? slides[0] : heroFallback[0];
+  // const slide = slides.length > 0 ? slides[0] : heroFallback[0];
   // const bg = settings.heroBg || slide?.image || "/default-hero.jpg";
 
   const headline = home.heroHeadline || "Empowering Women. Transforming Families. Building Stronger Communities.";
