@@ -10,7 +10,7 @@ const StoriesAdmin = () => (
     listColumns={["title"]}
     fields={[
       { name: "title", label: "Title", required: true },
-      { name: "image", label: "Image URL", type: "url" },
+      { name: "image", label: "Image", type: "image", folder: "stories" },
       { name: "description", label: "Description", type: "textarea", rows: 5, required: true },
       { name: "order", label: "Display Order", type: "number", default: 0 }
     ]}

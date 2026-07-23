@@ -8,9 +8,9 @@ import * as mock from "../../data/mock";
 const SEED_TASKS = [
   { key: "settings", label: "Site Settings (brand, contact, socials, UPI)", type: "doc", path: "content/settings", data: () => ({ ...mock.brand, ...mock.social, upiId: "gannasewa@upi", upiPayeeName: mock.brand.fullName, upiQrImage: "" }) },
   { key: "about", label: "About Page Content", type: "doc", path: "content/about", data: () => ({
-    heading: "Helping Today. Helping Tomorrow",
-    description: "We nurture underprivileged girl child section of the society, help needy child, work upon women empowerment for a strong nation building, get the right medical aid, outreach to outskirts and make education available for literacy & organize special need based programs. We at Gana Sewa Foundation want to seek all round development and well being of a girl child, regardless of circumstances they belong too.",
-    image: "https://shikshaseva.org/wp-content/uploads/2021/09/Helping-Today-Helping-tomorrow-.jpg",
+    heading: "Creating Opportunities Since 2008",
+    description: "Gana Sewa is a registered non-profit organization committed to empowering women, youth and underserved communities through skill development, education, health awareness and livelihood promotion. Founded in Assam in 2008, we have worked with government agencies, development organizations and community stakeholders to help individuals acquire practical skills, secure employment and become financially independent. We believe that talent is everywhere, but opportunity is not. Our mission is to bridge that gap.",
+    image: "/images/public/images/stories/certificate-success.jpg",
     storyHeading: "A Journey of Compassion and Change",
     storyPara1: "Gana Sewa Foundation was born from a simple yet powerful belief: every girl child deserves the right to education, health, and a life of dignity. Founded in 2012 by a small group of committed volunteers in Mumbai, we started with just 15 children in a Dharavi community center.",
     storyPara2: "Today, over a decade later, we work across 8 states, serving hundreds of thousands of women and girls.",
@@ -36,7 +36,32 @@ const SEED_TASKS = [
     stat2_label: p.stats[1]?.label, stat2_value: p.stats[1]?.value,
     stat3_label: p.stats[2]?.label, stat3_value: p.stats[2]?.value,
     order: i
-  })) }
+  })) },
+  { key: "causes", label: "Causes (What We Do)", type: "collection", collectionName: "causes", items: () => mock.causes.map((c, i) => ({ name: c.name, icon: c.icon, link: c.link, order: i })) },
+  { key: "homePrograms", label: "Home Programs Grid", type: "collection", collectionName: "homePrograms", items: () => mock.programs.map((p, i) => ({ hashtag: p.hashtag, description: p.description, image: p.image, slug: p.slug, order: i })) },
+  { key: "donationTiers", label: "Donation Impact Tiers", type: "collection", collectionName: "donationTiers", items: () => mock.donationTiers.map((t, i) => ({ ...t, order: i })) },
+  { key: "home", label: "Home Page Content (headings, CTAs, footer copy)", type: "doc", path: "content/home", data: () => ({
+    heroHeadline: "Empowering Women. Transforming Families. Building Stronger Communities.",
+    heroSubtitle: "For over 18 years, Gana Sewa has been helping women, youth and vulnerable communities gain the skills, confidence and opportunities they need to build a better future.",
+    heroTaxNote: mock.brand.taxNote,
+    heroPrimaryLabel: "Donate Now", heroPrimaryLink: "/donate",
+    heroSecondaryLabel: "Sponsor a Woman", heroSecondaryLink: "/donate",
+    heroTertiaryLabel: "Partner With Us", heroTertiaryLink: "/get-involved/partner",
+    causesEyebrow: "What We Do", causesHeading: "Building Lives Through Sustainable Development",
+    causesSubtitle: "Five focus areas working together to move families from dependency to dignity.",
+    programsEyebrow: "Our Programs", programsHeading: "Building Lives Through Sustainable Development",
+    programsSubtitle: "Focused initiatives that turn skills into livelihoods, education into aspirations and healthcare into stronger, self-reliant communities.",
+    supportEyebrow: "A Small Donation. A Big Change.",
+    supportHeading: "When you support one person, you transform an entire family.",
+    supportDescription: "Imagine being a woman eager to work, support your family and educate your children, but lacking the skills and opportunities to earn a livelihood. This is the reality faced by thousands of women and young people across India. Your donation helps us provide:",
+    footerTag1: "ONE OPPORTUNITY CAN CHANGE A FAMILY",
+    footerTag2: "ONE SKILL CAN CHANGE A LIFE",
+    footerTag3: "ONE DONATION CAN CHANGE A COMMUNITY",
+    footerCtaDescription: "Join us in empowering women, supporting children and creating sustainable livelihoods for those who need it most.",
+    footerCtaBold: "Be the reason someone gets a better future today!",
+    footerCtaButton: "DONATE NOW",
+    footerCtaLink: "/donate"
+  }) }
 ];
 
 const SeedAdmin = () => {

@@ -10,9 +10,11 @@ const AboutAdmin = () => (
       {
         label: "Home About Section",
         fields: [
-          { name: "heading", label: "Heading", full: true, hint: "e.g. Helping Today. Helping Tomorrow" },
+          { name: "heading", label: "Heading", full: true, hint: "e.g. Creating Opportunities Since 2008" },
+          { name: "eyebrow", label: "Eyebrow Text", hint: "Small uppercase label above the heading, e.g. Who We Are" },
           { name: "description", label: "Description Paragraph", type: "textarea", full: true, rows: 5 },
-          { name: "image", label: "Section Image URL", type: "url", full: true }
+          { name: "description2", label: "Description Paragraph 2 (optional)", type: "textarea", full: true, rows: 3 },
+          { name: "image", label: "Section Image", type: "image", folder: "about", full: true }
         ]
       },
       {
@@ -21,7 +23,8 @@ const AboutAdmin = () => (
           { name: "storyHeading", label: "Story Heading", full: true },
           { name: "storyPara1", label: "Paragraph 1", type: "textarea", full: true, rows: 4 },
           { name: "storyPara2", label: "Paragraph 2", type: "textarea", full: true, rows: 4 },
-          { name: "storyPara3", label: "Paragraph 3", type: "textarea", full: true, rows: 4 }
+          { name: "storyPara3", label: "Paragraph 3", type: "textarea", full: true, rows: 4 },
+          { name: "storyImage", label: "Story Image", type: "image", folder: "about", full: true }
         ]
       },
       {

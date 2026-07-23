@@ -1,26 +1,29 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { programs } from "../data/mock";
+import { useCollection, useDoc } from "../hooks/useContent";
+import { programs as fallback } from "../data/mock";
 
 const ProgramsSection = () => {
+  const items = useCollection("homePrograms", fallback);
+  const home = useDoc("content/home", {});
+  const eyebrow = home.programsEyebrow || "Our Programs";
+  const heading = home.programsHeading || "Building Lives Through Sustainable Development";
+  const subtitle = home.programsSubtitle || "Focused initiatives that turn skills into livelihoods, education into aspirations and healthcare into stronger, self-reliant communities.";
+
   return (
     <section id="programs" className="py-16 md:py-20 bg-white">
       <div className="container-x">
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <h4 className="text-[#059669] uppercase tracking-widest text-sm font-semibold mb-3">Our Programs</h4>
-          <h2 className="text-3xl md:text-4xl font-bold text-[#059669] mb-4">
-            Building Lives Through Sustainable Development
-          </h2>
-          <p className="text-gray-600 leading-relaxed">
-            Focused initiatives that turn skills into livelihoods, education into aspirations and healthcare into stronger, self-reliant communities.
-          </p>
+          <h4 className="text-[#059669] uppercase tracking-widest text-sm font-semibold mb-3">{eyebrow}</h4>
+          <h2 className="text-3xl md:text-4xl font-bold text-[#059669] mb-4">{heading}</h2>
+          <p className="text-gray-600 leading-relaxed">{subtitle}</p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {programs.map((p) => (
-            <Link to={`/projects/${p.slug}`} key={p.id} className="program-card shadow-lg bg-white block">
+          {items.map((p) => (
+            <Link to={p.slug ? `/projects/${p.slug}` : "/projects"} key={p.id} className="program-card shadow-lg bg-white block">
               <div className="aspect-[4/5] overflow-hidden">
-                <img src={p.image} alt={p.hashtag} className="w-full h-full object-cover" />
+                {p.image && <img src={p.image} alt={p.hashtag} className="w-full h-full object-cover" />}
               </div>
               <div className="p-5 text-center bg-white">
                 <h4 className="text-lg font-bold text-gray-900">{p.hashtag}</h4>

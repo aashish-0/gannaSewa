@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, NavLink, Outlet, useNavigate } from "react-router-dom";
-import { LayoutDashboard, Image, FileText, Users, Newspaper, Award, Briefcase, Camera, Building2, Star, Settings, LogOut, Menu, ExternalLink, Home, BookOpen, Heart } from "lucide-react";
+import { LayoutDashboard, Image, FileText, Users, Newspaper, Award, Briefcase, Camera, Building2, Star, Settings, LogOut, Menu, ExternalLink, Home, BookOpen, Heart, Grid3x3, HandCoins, Layout } from "lucide-react";
 import { useAuth } from "../context/AuthContext";
 
 const navGroups = [
@@ -14,8 +14,12 @@ const navGroups = [
   {
     label: "Content",
     items: [
-      { name: "Hero Slides", to: "/admin/hero-slides", Icon: Image },
       { name: "Site Settings", to: "/admin/settings", Icon: Settings },
+      { name: "Home Content", to: "/admin/home-content", Icon: Layout },
+      { name: "Hero Slides", to: "/admin/hero-slides", Icon: Image },
+      { name: "Causes (What We Do)", to: "/admin/causes", Icon: Grid3x3 },
+      { name: "Home Programs Grid", to: "/admin/home-programs", Icon: BookOpen },
+      { name: "Donation Tiers", to: "/admin/donation-tiers", Icon: HandCoins },
       { name: "About Page", to: "/admin/about", Icon: FileText },
       { name: "Projects", to: "/admin/projects", Icon: BookOpen },
       { name: "Impact Stats", to: "/admin/stats", Icon: Award }

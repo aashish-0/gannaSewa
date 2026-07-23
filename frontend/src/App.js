@@ -19,6 +19,7 @@ import Careers from "./pages/Careers";
 import Donate from "./pages/Donate";
 import SiteLayout from "./components/SiteLayout";
 import ScrollToTop from "./components/ScrollToTop";
+import DynamicHead from "./components/DynamicHead";
 import { Toaster } from "./components/ui/toaster";
 import { AuthProvider } from "./context/AuthContext";
 import ProtectedRoute from "./components/ProtectedRoute";
@@ -41,12 +42,17 @@ import PartnersAdmin from "./pages/admin/PartnersAdmin";
 import CelebritiesAdmin from "./pages/admin/CelebritiesAdmin";
 import UsersAdmin from "./pages/admin/UsersAdmin";
 import SeedAdmin from "./pages/admin/SeedAdmin";
+import CausesAdmin from "./pages/admin/CausesAdmin";
+import HomeProgramsAdmin from "./pages/admin/HomeProgramsAdmin";
+import DonationTiersAdmin from "./pages/admin/DonationTiersAdmin";
+import HomeContentAdmin from "./pages/admin/HomeContentAdmin";
 
 function App() {
   return (
     <div className="App">
       <AuthProvider>
         <BrowserRouter>
+          <DynamicHead />
           <ScrollToTop />
           <Routes>
             {/* Public site */}
@@ -77,8 +83,12 @@ function App() {
                 <Route path="seed" element={<SeedAdmin />} />
                 <Route path="hero-slides" element={<HeroSlidesAdmin />} />
                 <Route path="settings" element={<SiteSettingsAdmin />} />
+                <Route path="home-content" element={<HomeContentAdmin />} />
                 <Route path="about" element={<AboutAdmin />} />
                 <Route path="projects" element={<ProjectsAdmin />} />
+                <Route path="home-programs" element={<HomeProgramsAdmin />} />
+                <Route path="causes" element={<CausesAdmin />} />
+                <Route path="donation-tiers" element={<DonationTiersAdmin />} />
                 <Route path="stats" element={<ImpactStatsAdmin />} />
                 <Route path="team" element={<TeamAdmin />} />
                 <Route path="blog" element={<BlogAdmin />} />

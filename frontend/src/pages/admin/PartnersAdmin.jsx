@@ -10,7 +10,7 @@ const PartnersAdmin = () => (
     listColumns={["name"]}
     fields={[
       { name: "name", label: "Partner Name", required: true },
-      { name: "logo", label: "Logo URL", type: "url", required: true },
+      { name: "logo", label: "Logo", type: "image", folder: "partners", aspect: "aspect-video", required: true },
       { name: "link", label: "Website (optional)", type: "url" },
       { name: "order", label: "Display Order", type: "number", default: 0 }
     ]}

@@ -2,6 +2,7 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
+import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBkUBw7JNe7Ci5-c6TFSiBO33k84eCqH4s",
@@ -16,6 +17,7 @@ const firebaseConfig = {
 export const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
 export const db = getFirestore(app);
+export const storage = getStorage(app);
 
 // Initial super admin email(s) - has full access to CMS on first login
 export const SUPER_ADMIN_EMAILS = ["aaashishg92@gmail.com"];

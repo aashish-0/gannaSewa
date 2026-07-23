@@ -4,15 +4,30 @@ import DocumentEditor from "../../components/DocumentEditor";
 const SiteSettingsAdmin = () => (
   <DocumentEditor
     title="Site Settings"
-    description="Brand info, contact details, and social media links used across the site."
+    description="Brand, contact, favicon, meta and social settings used across the site."
     docPath="content/settings"
     sections={[
+      {
+        label: "Site Identity",
+        fields: [
+          { name: "favicon", label: "Favicon", type: "image", folder: "site", aspect: "aspect-square", full: true, hint: "PNG/ICO/SVG, 32x32 or 64x64 recommended. Applies live to every page (browser tab icon)." },
+          { name: "siteTitle", label: "Browser Tab Title", full: true, hint: "Shown in the browser tab and search results." },
+          { name: "metaDescription", label: "Meta Description", type: "textarea", full: true, rows: 2, hint: "Shown by Google & social previews. Keep under ~160 chars." },
+          { name: "themeColor", label: "Theme Color (hex)", hint: "e.g. #059669 — used by mobile browsers for the address bar." }
+        ]
+      },
+      {
+        label: "Homepage Hero (Banner)",
+        fields: [
+          { name: "heroBg", label: "Banner Background Image", type: "image", folder: "hero", full: true, hint: "1920×1000 recommended. Overrides the default homepage hero background." }
+        ]
+      },
       {
         label: "Brand & Contact",
         fields: [
           { name: "name", label: "Organization Name" },
           { name: "fullName", label: "Full Name" },
-          { name: "tagline", label: "Tagline", hint: "e.g. EMPOWERING GIRLS AND WOMEN" },
+          { name: "tagline", label: "Tagline", hint: "e.g. SKILLING WOMEN. EMPOWERING FAMILIES." },
           { name: "phone", label: "Phone (display)" },
           { name: "phoneRaw", label: "Phone (raw, for tel: link)", hint: "e.g. +919876543210" },
           { name: "email", label: "Email", type: "email" },
@@ -37,7 +52,7 @@ const SiteSettingsAdmin = () => (
         fields: [
           { name: "upiId", label: "UPI ID", hint: "e.g. gannasewa@upi" },
           { name: "upiPayeeName", label: "Payee Name (as on UPI)" },
-          { name: "upiQrImage", label: "UPI QR Image URL", type: "url", full: true }
+          { name: "upiQrImage", label: "UPI QR Image", type: "image", folder: "site", aspect: "aspect-square", full: true }
         ]
       }
     ]}

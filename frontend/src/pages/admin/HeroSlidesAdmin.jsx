@@ -9,7 +9,7 @@ const HeroSlidesAdmin = () => (
     imageField="image"
     listColumns={["alt"]}
     fields={[
-      { name: "image", label: "Slide Image URL", type: "url", required: true, hint: "Recommended: wide banner image (1920x800 or similar)" },
+      { name: "image", label: "Slide Image", type: "image", folder: "hero", required: true, hint: "Recommended: 1920x800 or wider. JPG/PNG/WebP up to 8 MB." },
       { name: "alt", label: "Alt Text / Internal Label", required: true, placeholder: "e.g. School Kit Drive" },
       { name: "title", label: "Overlay Title (optional)", placeholder: "Leave blank for image-only slide" },
       { name: "subtitle", label: "Overlay Subtitle (optional)", type: "textarea", rows: 2 },

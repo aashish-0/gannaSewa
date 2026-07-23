@@ -9,7 +9,7 @@ const GalleryAdmin = () => (
     imageField="url"
     listColumns={["caption"]}
     fields={[
-      { name: "url", label: "Image URL", type: "url", required: true, placeholder: "https://..." },
+      { name: "url", label: "Image", type: "image", folder: "gallery", aspect: "aspect-square", required: true },
       { name: "caption", label: "Caption (optional)" },
       { name: "order", label: "Display Order", type: "number", default: 0 }
     ]}

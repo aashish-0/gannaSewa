@@ -10,7 +10,7 @@ const CelebritiesAdmin = () => (
     listColumns={["name"]}
     fields={[
       { name: "name", label: "Name", required: true },
-      { name: "image", label: "Photo URL", type: "url", required: true },
+      { name: "image", label: "Photo", type: "image", folder: "celebrities", aspect: "aspect-square", required: true },
       { name: "order", label: "Display Order", type: "number", default: 0 }
     ]}
   />

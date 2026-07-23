@@ -2,10 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import PageBanner from "../components/PageBanner";
 import { ArrowRight, Heart } from "lucide-react";
-import { useCollection } from "../hooks/useContent";
 import { projectsData, donationTiers } from "../data/mock";
 
-const fallbackProjects = Object.entries(projectsData).map(([slug, p], i) => ({
+// Convert the projectsData object into an array for easy mapping
+const projects = Object.entries(projectsData).map(([slug, p], i) => ({
   id: slug,
   slug,
   title: p.title,
@@ -15,8 +15,6 @@ const fallbackProjects = Object.entries(projectsData).map(([slug, p], i) => ({
 }));
 
 const ProjectsList = () => {
-  const projects = useCollection("projects", fallbackProjects);
-
   return (
     <>
       <PageBanner title="Our Programs" breadcrumbs={[{ label: "Our Programs" }]} />
