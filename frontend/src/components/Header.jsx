@@ -16,7 +16,7 @@ const Header = () => {
         <Link to="/" className="absolute left-6 -top-1 md:top-2 bg-white rounded-b-2xl px-5 pt-3 pb-4 shadow-lg z-10">
           <div className="flex flex-col items-center">
             <div className="w-14 h-14 flex items-center justify-center">
-              <img src="/images/logo/ganaSewa_logo.png"></img>
+              <img src="/images/logo/ganasewa_logo.png"></img>
             </div>
             <div className="text-[#059669] font-bold text-[13px] leading-tight tracking-tight">Gana Sewa</div>
             <div className="text-[#059669] text-[7px] mt-0.5 tracking-wider">{brand.tagline}</div>

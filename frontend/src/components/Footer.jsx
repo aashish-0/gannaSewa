@@ -65,7 +65,7 @@ const Footer = () => {
         <div>
           <div className="flex items-center gap-3 mb-4">
             <div className="w-12 h-12 rounded-full flex items-center justify-center">
-              <img src="/images/logo/ganaSewa_logo.png"></img>
+              <img src="/images/logo/ganasewa_logo.png"></img>
             </div>
             <div>
               <div className="text-white font-bold">Gana Sewa</div>
